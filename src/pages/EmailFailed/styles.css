@@ -1,0 +1,36 @@
+.emailfail{
+    background-color: #EBF2FF; 
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.emailfail-contain{
+    align-items: center;
+    justify-content: center;
+    padding: 3.3rem;
+}
+.fail-container{
+    background-color: #F8F8F8;
+    padding: 20px;
+    width: 850px;
+    color: white;
+    height: 530px;
+    border-radius: 16px;
+    margin-left: 240px;
+}
+.fail-contain{
+    margin-left: 140px;
+    margin-top: 170px;
+}
+.fail-img{
+    width: 9%;
+    margin-left: 230px;
+}
+.fail-h2{
+    color: #000000;
+    margin-left: 69px;
+}
+.fail-h4{
+    color: #777777;
+    margin-left: 183px;
+    font-size: 17px;
+}

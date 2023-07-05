@@ -1,0 +1,36 @@
+.emailsuccess{
+    background-color: #EBF2FF; 
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.emailsuccess-contain{
+    align-items: center;
+    justify-content: center;
+    padding: 3.3rem;
+}
+.success-container{
+    background-color: #F8F8F8;
+    padding: 20px;
+    width: 850px;
+    color: white;
+    height: 530px;
+    border-radius: 16px;
+    margin-left: 240px;
+}
+.success-contain{
+    margin-left: 140px;
+    margin-top: 170px;
+}
+.success-img{
+    width: 9%;
+    margin-left: 230px;
+}
+.success-h2{
+    color: #000000;
+    margin-left: 85px;
+}
+.success-h4{
+    color: #777777;
+    margin-left: 113px;
+    font-size: 14px;
+}

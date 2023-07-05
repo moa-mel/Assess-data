@@ -1,0 +1,127 @@
+.register{
+    background-color: #EBF2FF; 
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.reg-contain{
+    max-width: 1240px;
+    margin: auto;
+}
+.register-nav{
+    display: flex;
+    padding: 1rem;
+    justify-content: flex-end;
+    column-gap: 60px;
+}
+.reg-p{
+    color: #00122E;
+}
+.reg-but{
+    padding: 7px 18px;
+    border: 1px solid #00122E;
+    background-color: #00122E;
+    color: #fff;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+.register-container{
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-between;
+    margin-top: 80px;
+    column-gap: 80px;
+}
+form{
+  top: 40%;
+  left: 50%;
+  border-radius: 8px;
+  background-color: #35246E;
+  max-width: 400px;
+  height: 98%;
+}
+.form-p{
+    color: #FFFFFF;
+    font-size: 2.0rem;
+    margin-left: 100px;
+}
+.reg-fl{
+    display: flex;
+    column-gap: -3px;
+    padding: 4 3rem;
+}
+.reg-fl-input:hover {
+    outline: 0.5px solid #EEEEEE;
+    -webkit-box-shadow: 2px 2px 9px -2px #EEEEEE;
+            box-shadow: 2px 2px 9px -2px #EEEEEE;      
+}
+.reg-fl-input{
+    display: block;
+    border: none;
+    height: 2rem;
+    width: 30%;
+    margin-left: 50px ;
+    margin-bottom: 1.5rem;
+    border-radius: 8px 8px;
+    padding: 0.2rem 0.3rem;
+    font-size: small;
+    color: #01C8FF;
+    border:1.5px solid #EEEEEE;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    background-color:#EEEEEE;
+}
+.input-text{
+    display: block;
+    border: none;
+    height: 2rem;
+    width: 75%;
+    margin-left: 50px ;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem 0.3rem;
+    font-size: small;
+    color: #01C8FF;
+    border-radius: 8px 8px;
+    border:1.5px solid #EEEEEE;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    background-color:#EEEEEE;
+}
+.input-text:hover {
+    outline: 0.5px solid #EEEEEE;
+    -webkit-box-shadow: 2px 2px 9px -2px #EEEEEE;
+            box-shadow: 2px 2px 9px -2px #EEEEEE;
+}
+.reg-button{
+    padding: 7px 18px;
+    border: 1px solid #4F94FC;
+    background-color: #4F94FC;
+    color: #fff;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    cursor: pointer; 
+    margin-left: 150px; 
+}
+ .reg-p{
+    display: flex;
+    margin-left: 40px;
+ }
+  .reg-agreed{
+    color: #FFFFFF;
+  }
+  .reg-terms{
+    color: #4F94FC;
+  }
+  @media screen and (max-width: 768px) {
+    .register-right{
+        width: 700%;
+        background-color:#E3ECFF;
+        height: 100%;
+    }
+    .register-left{
+        display: none;
+    }
+}
+
