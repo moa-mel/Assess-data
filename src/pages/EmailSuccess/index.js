@@ -8,7 +8,7 @@ const EmailSuccess = () => {
   
   setTimeout(() => 
   navigate("/category"
-  ), 4000);
+  ), 2000);
   return (
     <div className='emailsuccess'>
      <div className='emailsuccess-contain'>

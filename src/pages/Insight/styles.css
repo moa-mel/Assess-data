@@ -1,0 +1,33 @@
+.insight{
+    background-color: #EBF2FF; 
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.insight-header{
+    display: flex;
+    padding: -3rem;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+}
+.insight-search{
+    width: 300px;
+	height: 42px;
+	background-color: #F1F6FF;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+}
+.insight-search i {
+    font-size: 20px;
+	color: #000000;
+}
+.insight-input{
+    flex: 1;
+    height: 40px;
+	border: none;
+	outline: none;
+    background-color: #F1F6FF;
+	font-size: 18px;
+	padding-left: 10px;
+}
