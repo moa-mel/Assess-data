@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
-import './styles.css'
-import axios from "axios"
-import logimg from "../../images/undraw_secure_login_pdn4 1.png"
+import axios from "axios";
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import logimg from "../../images/undraw_secure_login_pdn4 1.png";
+import './styles.css';
 
 const Login = () => {
   const [data, setData] = useState({
@@ -38,7 +38,7 @@ const Login = () => {
     <div className='login'>
     <div className='login-contain'>
     <div className='login-nav'>
-     <p className='log-p'>You don't have an account?</p>
+     <p className='log-p'>{"You don't have an account?"}</p>
      <Link to='/register'>
      <button className='login-but'>Sign up</button>
      </Link>

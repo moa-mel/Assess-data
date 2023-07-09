@@ -20,7 +20,7 @@ const EmailFailed = () => {
        <img className='fail-img' src={fail} alt=''/>
        <br/>
        <br/>
-       <h2 className='fail-h2'>Your account wasn't created successfully</h2>
+       <h2 className='fail-h2'>{"Your account wasn't created successfully"}</h2>
        <h4 className='fail-h4'>Please try again</h4>
        </div>
        </div>

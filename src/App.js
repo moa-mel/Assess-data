@@ -1,17 +1,17 @@
-import './App.css';
 import {
-  BrowserRouter as Router, 
-  Routes, 
-  Route
+  Route,
+  BrowserRouter as Router,
+  Routes
 } from 'react-router-dom';
-import Home from "./pages/Home"
-import Register from "./pages/Register"
-import Login from './pages/Login';
+import './App.css';
+import Category from './pages/Category';
 import EmailFailed from './pages/EmailFailed';
 import EmailSuccess from './pages/EmailSuccess';
-import Category from './pages/Category';
+import Home from "./pages/Home";
 import Insight from './pages/Insight';
-import Verify from "./pages/Verify"
+import Login from './pages/Login';
+import Register from "./pages/Register";
+import Verify from "./pages/Verify";
 
 function App() {
   return (

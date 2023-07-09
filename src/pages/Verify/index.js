@@ -7,20 +7,27 @@ import "./styles.css";
 const Verify = () => {
   const navigate = useNavigate()
   const [success, setSuccess] = useState(false)
-  const [code, setCode] = useState("");
+  
   const [errorMsg, setErrorMsg] = useState(null) 
+  const [digitOne, setDigitOne] = useState("")
+  const [digitTwo, setDigitTwo] = useState("")
+  const [digitThree, setDigitThree] = useState("")
+  const [digitFour, setDigitFour] = useState("")
+  const [digitFive, setDigitFive] = useState("")
+  const [digitSix, setDigitSix] = useState("")
+
 
     
   const handleSubmit = async (e) => {
     //TODO: look for how u would pass the code down to the function, create a state for the code and pass it down to the function
     e.preventDefault()
    /* let code = 1212 */
+    const code = digitOne + digitTwo + digitThree + digitFour + digitFive + digitSix
     await axios
       .post(`https://final-year-project-ya34.onrender.com/api/auth/verify-email`, { code })
       .then(res => {
         if (res.status === 200) {
           setSuccess(true)
-          setCode(res)
         } else {
           setSuccess(false)
           setErrorMsg(res)
@@ -39,6 +46,7 @@ const Verify = () => {
     }
   },[success])
 
+  
   return (
     <div className='wrapper'>
       <div className='container'>
@@ -53,36 +61,37 @@ const Verify = () => {
        <div className='wrap-less'>
        <form className="code-form" onSubmit={handleSubmit} method="POST" >
          <input className='less-input'
-          type="text"
-           maxLength="1"
-          
+            type="text"
+            maxLength="1"
+            onChange={(e) => setDigitOne(e.target.value)}
            />
          <input className='less-input' 
-        
+        onChange={(e) => setDigitTwo(e.target.value)}
          type="text" 
          maxLength="1"/>
          <input 
          className='less-input'
           type="text"
            maxLength="1"
-          
+           onChange={(e) => setDigitThree(e.target.value)}
            />
          <input 
          className='less-input'
           type="text" 
           maxLength="1"
-          
+          onChange={(e) => setDigitFour(e.target.value)}
           />
          <input 
          className='less-input' 
          type="text" 
          maxLength="1"
-         
+         onChange={(e) => setDigitFive(e.target.value)}
          />
          <input 
          className='less-input' 
          type="text" 
          maxLength="1"
+         onChange={(e) => setDigitSix(e.target.value)}
          />
         <br/>
         <br/>
