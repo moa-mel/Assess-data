@@ -5,9 +5,14 @@
 }
 .insight-header{
     display: flex;
-    padding: -3rem;
+    padding: 1rem;
     justify-content: space-between;
     background-color: #FFFFFF;
+    margin-top: -1px;
+    height: 65px;
+}
+.insight-logo{
+   /* width: 5%; */
 }
 .insight-search{
     width: 300px;
@@ -30,4 +35,34 @@
     background-color: #F1F6FF;
 	font-size: 18px;
 	padding-left: 10px;
+}
+.insight-end{
+    display: flex;
+    padding: 1rem;
+    column-gap: 19px;
+    margin-top: 1px;
+}
+.insight-hp{
+    margin-top: -8px;
+}
+.insight-v3{
+    width: 15%;
+    height: 7px;
+    margin-top: 1px;
+    margin-left: -20px;
+}
+.insight-e3{
+    margin-top:-11px;
+    width: 85%;
+    height: 33px;
+}
+.insight-nav{
+    display:flex;
+    justify-content: space-between;
+    background-color: #F3F4F6;
+}
+.insight-drop{
+    display:flex;
+    padding: 1rem;
+    column-gap: 25px;
 }

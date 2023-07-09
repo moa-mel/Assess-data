@@ -11,6 +11,7 @@ import EmailFailed from './pages/EmailFailed';
 import EmailSuccess from './pages/EmailSuccess';
 import Category from './pages/Category';
 import Insight from './pages/Insight';
+import Verify from "./pages/Verify"
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path="/failed" element={<EmailFailed/>} />
       <Route path="/category" element={<Category/>} />
       <Route path="/insight" element={<Insight/>} />
+      <Route path="/Verify" element={<Verify/>} />
     </Routes>
   </Router>
     </div>
