@@ -1,14 +1,16 @@
-import React from 'react'
-import "./styles.css"
-import fail from "../../images/pngegg (2) 1.png"
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import fail from "../../images/pngegg (2) 1.png";
+import "./styles.css";
 
 const EmailFailed = () => {
   const navigate = useNavigate();
   
-  setTimeout(() => 
-  navigate("/register"
-  ), 4000);
+  useEffect(() => {
+    setTimeout(() => 
+    navigate("/register"
+    ), 4000);
+  })
 
   return (
     <div className='emailfail'>

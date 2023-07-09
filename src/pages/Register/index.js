@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react'
-import './styles.css'
-import axios from "axios"
-import regimg from "../../images/undraw_Content_re_33px 1.png"
+import axios from "axios";
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import regimg from "../../images/undraw_Content_re_33px 1.png";
+import './styles.css';
 
 const Register = () => {
   const [data, setData] = useState({
@@ -16,9 +16,11 @@ const Register = () => {
 
   const [error, setError] = useState("");
   const navigate = useNavigate()
+  const [success,setSuccess] = useState(false)
 	const [msg, setMsg] = useState("")
 
   const handleChange = ({ currentTarget: input }) => {
+    setError("")
 		setData({ ...data, [input.name]: input.value });
 	};
 
@@ -27,8 +29,11 @@ const Register = () => {
 		try {
 			const url = "https://final-year-project-ya34.onrender.com/api/auth/register";
 			const{ data: res } = await axios.post(url, data);
-		setMsg(res.message); 
-    navigate("/verify")
+      if(res.success){
+        setMsg(res.message); 
+        setSuccess(true)
+        setError("")
+      }
 		} catch (error) {
 			if (
 				error.response &&
@@ -39,6 +44,16 @@ const Register = () => {
 			}
 		}
 	};
+
+  useEffect(() => {
+    console.log(success,'success')
+    if(success){
+      const timer = setTimeout(() => {
+        navigate("/verify")
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [success]);
 
 
   return (
