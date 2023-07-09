@@ -1,26 +1,26 @@
 import axios from "axios";
 import React, { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import EmailFailed from "../../pages/EmailFailed";
 import "./styles.css";
 
 const Verify = () => {
   const navigate = useNavigate()
   const [success, setSuccess] = useState(false)
-  const param = useParams();
- 
+  const [code, setCode] = useState("");
   const [errorMsg, setErrorMsg] = useState(null) 
 
     
   const handleSubmit = async (e) => {
     //TODO: look for how u would pass the code down to the function, create a state for the code and pass it down to the function
     e.preventDefault()
-    let code = 1212
+   /* let code = 1212 */
     await axios
       .post(`https://final-year-project-ya34.onrender.com/api/auth/verify-email`, { code })
       .then(res => {
         if (res.status === 200) {
           setSuccess(true)
+          setCode(res)
         } else {
           setSuccess(false)
           setErrorMsg(res)
