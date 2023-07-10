@@ -50,7 +50,7 @@ const Register = () => {
     console.log(success, 'success');
     if (success) {
       const timer = setTimeout(() => {
-        navigate('/verify');
+        navigate('/verify/?email={email}');
       }, 3000);
       return () => clearTimeout(timer);
     }
