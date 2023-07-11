@@ -1,0 +1,47 @@
+.reset-otp{
+    background-color:#FFFFFF;
+}
+.ro-container{
+    margin-left: 540px;
+    margin-top: 100px;
+}
+.ro-img{
+    margin-left: 120px ;
+}
+.ro-h2{
+    color: #000000;
+    font-size: 2.5rem;
+    margin-left: 40px ;
+}
+.ro-p{
+    color: #000000;
+}
+.ro-form{
+    background-color:#FFFFFF;
+}
+.ro-input{
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 9px;
+    border:1.5px solid #858585;
+    //background-color:#000000; 
+    font-weight: bold;
+    color: #000000;
+    outline: none;
+    transition: all 0.1s;
+}
+.ro-button{
+    padding: 7px 18px;
+    border: 1px solid #49397C;
+    background-color: #49397C;
+    color: #fff;
+    border-radius: 11px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    cursor: pointer;
+    width: 90%;
+}

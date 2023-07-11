@@ -25,7 +25,7 @@ const Verify = () => {
     await axios
       .post(
         `https://final-year-project-ya34.onrender.com/api/auth/verify-email`,
-        { token, email }
+         { token,  email}
       )
       .then(res => {
         if (res.status === 200) {

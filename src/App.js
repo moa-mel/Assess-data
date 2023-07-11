@@ -12,6 +12,10 @@ import Insight from './pages/Insight';
 import Login from './pages/Login';
 import Register from "./pages/Register";
 import Verify from "./pages/Verify";
+import ResetEmail from "./pages/ResetEmail"
+import ResetOtp from "./pages/ResetOtp"
+import ResetPassword from "./pages/ResetPassword"
+import ResetConfirm from "./pages/ResetConfirm"
 
 function App() {
   return (
@@ -26,6 +30,10 @@ function App() {
       <Route path="/category" element={<Category/>} />
       <Route path="/insight" element={<Insight/>} />
       <Route path="/Verify" element={<Verify/>} />
+      <Route path="/resetemail" element={<ResetEmail/>} />
+      <Route path="/resetotp/:email" element={<ResetOtp/>} />
+      <Route path="/resetpassword/:email" element={<ResetPassword/>} />
+      <Route path="/confirm" element={<ResetConfirm/>} />
     </Routes>
   </Router>
     </div>
