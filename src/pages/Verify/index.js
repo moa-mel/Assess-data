@@ -1,11 +1,11 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import EmailFailed from '../../pages/EmailFailed';
 import './styles.css';
 
 const Verify = () => {
-
+  const [params, setParams] = useSearchParams();
   const navigate = useNavigate();
   const [success, setSuccess] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -14,18 +14,17 @@ const Verify = () => {
   const [digitThree, setDigitThree] = useState('');
   const [digitFour, setDigitFour] = useState('');
   const [digitFive, setDigitFive] = useState('');
-  const [digitSix, setDigitSix] = useState(''); 
-  const {email} = useParams()
-  console.log("go")
-
+  const [digitSix, setDigitSix] = useState('');
+  const [email, setEmail] = useState(params.get('email'));
   const handleSubmit = async e => {
     //TODO: look for how u would pass the code down to the function, create a state for the code and pass it down to the function
     e.preventDefault();
-    // let code = 1212 
-    const token = digitOne + digitTwo + digitThree + digitFour + digitFive + digitSix;
+    // let code = 1212
+    const token =
+      digitOne + digitTwo + digitThree + digitFour + digitFive + digitSix;
     await axios
       .post(
-        `https://final-year-project-ya34.onrender.com/api/auth/verify-email/a=?`,
+        `https://final-year-project-ya34.onrender.com/api/auth/verify-email`,
         { token, email }
       )
       .then(res => {
@@ -46,7 +45,7 @@ const Verify = () => {
     if (success) {
       navigate('/success');
     }
-  }, [success]); 
+  }, [success]);
 
   return (
     <div className="wrapper">
