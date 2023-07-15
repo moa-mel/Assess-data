@@ -2,7 +2,7 @@ import React from 'react'
 import './styles.css'
 import { LineChart, Line, XAxis,YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-export default function Chart ({title, data, dataKey, grid}){
+ const Chart = ({title, data, dataKey, grid}) => {
 
     return(
         <div className="chart">
@@ -23,3 +23,4 @@ export default function Chart ({title, data, dataKey, grid}){
         </div>
     )
 }
+export default Chart
