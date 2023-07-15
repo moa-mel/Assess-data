@@ -17,6 +17,7 @@ import ResetEmail from "./pages/ResetEmail"
 import ResetOtp from "./pages/ResetOtp"
 import ResetPassword from "./pages/ResetPassword"
 import ResetConfirm from "./pages/ResetConfirm"
+import Payment from "./pages/Payment"
 
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
       <Route path="/resetotp/:email" element={<ResetOtp/>} />
       <Route path="/resetpassword/:email" element={<ResetPassword/>} />
       <Route path="/confirm" element={<ResetConfirm/>} />
-    </Routes>
+      <Route path="/payment" element={<Payment/>} />
+      </Routes>
   </Router>
     </div>
   );

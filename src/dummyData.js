@@ -1,48 +1,51 @@
 export const regionAvgPerfData = [
     {
       name: 'south-south',
-      uvv : 5,
-      amount: 2,
+      'fig' : 10,
+      'gif': 4,
     },
     {
         name: 'south-west',
-        uvv : 19,
-        amount: 20,
+        'fig' : 20,
+        'gif': 22,
       },
       {
         name: 'south-east',
-        uvv : 2,
-        amount: 4,
+        'fig' : 3,
+        'gif': 2,
       },
       {
         name: 'north-east',
-        uvv : 8,
-        amount: 9,
+        'fig' : 9,
+        'gif': 10,
       },
       {
         name: 'north-central',
-        uvv : 4,
-        amount: 5,
+        'fig' : 15,
+        'gif': 5,
       },
       {
         name: 'north-west',
-        uvv : 15,
-        amount: 16,
+        'fig' : 25,
+        'gif': 16,
       },
   ];
   export const regionGenPerfData = [
     {
       name: 'Passesd',
-      "uv" : 1.2,
-      "pv": 3.9,
+      "lip" : 1.2,
+      "pil": 3.9,
+      "vul": 2,
     },
     {
         name: 'Failed',
-        "uv" : 2.5,
+        "lip" : 2.5,
+        "vul": 3,
       },
       {
         name: 'Cancelled',
-        "uv" : 4.7,
-        "pv": 1.8, 
+        "lip" : 4.7,
+        "pil": 1.8,
+        "vul": 5, 
       },
   ];

@@ -5,20 +5,20 @@
 }
 .insight-header{
     display: flex;
-    padding: 1rem;
+   /* padding: 1rem; */
     justify-content: space-between;
     background-color: #FFFFFF;
-    margin-top: -1px;
     height: 65px;
 }
 .insight-logo{
    /* width: 5%; */
 }
 .insight-search{
+    margin-top: 12px;
     display: flex;
     height: 2rem;
-    width: 30%;
-    margin-left: 5px ;
+    width: 25%;
+    margin-right: 135px ;
     margin-bottom: 1.5rem;
     padding: 0.2rem 0.3rem;
     font-size: small;
@@ -51,7 +51,7 @@
     margin-top: -8px;
 }
 .insight-e3{
-    margin-top:-11px;
+    margin-top:-3px;
     width: 70%;
     height: 30px;
 }
@@ -64,6 +64,7 @@
 .insight-nav-h{
     color:#49397C;
     margin-left: 15px;
+    font-size:1.6rem;
 }
 .insight-drop{
     display:flex;
@@ -80,7 +81,7 @@
 }
 .in-side-p1{
     align-item: centre;
-    margin-left: 60px;
+    margin-left: 30px;
     padding: 20px;
     height: 70px;
     color: #49397C;
@@ -90,7 +91,7 @@
 .in-side-p2{
     margin-top: 10px;
     align-item: centre;
-    margin-left: 60px;
+    margin-left: 30px;
     padding: 20px;
     height: 70px;
     color: #49397C;
@@ -100,7 +101,7 @@
 .in-side-p3{
     margin-top: 10px;
     align-item: centre;
-    margin-left: 60px;
+    margin-left: 30px;
     padding: 20px;
     height: 70px;
     color: #49397C;
@@ -110,7 +111,7 @@
 .in-side-p4{
     margin-top: 10px;
     align-item: centre;
-    margin-left: 60px;
+    margin-left: 30px;
     padding: 20px;
     height: 70px;
     color: #49397C;
@@ -120,7 +121,7 @@
 .in-side-p5{
     margin-top: 10px;
     align-item: centre;
-    margin-left: 60px;
+    margin-left: 30px;
     padding: 20px;
     height: 70px;
     color: #49397C;
@@ -132,13 +133,16 @@
 }
 .in-con{
     display: flex;
-    column-gap: 10px
+    column-gap: 10px;
+    margin-right: 79px;
 }
 .in-con-chart{
     background-color: #F3F4F6;
+    width: 60%;
 }
 .in-con-line{
     background-color: #F3F4F6;
+    width: 60%;
 }
 .in-con-p{
    color: #FF0000;

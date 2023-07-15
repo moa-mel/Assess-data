@@ -7,11 +7,11 @@ import { search } from 'react-icons-kit/feather/search'
 import { Icon } from "react-icons-kit"
 import { regionAvgPerfData } from "../../dummyData"
 import { regionGenPerfData } from "../../dummyData"
-import Chart  from "../../components/Chart"
+import Chart from "../../components/chart/Chart"
+import {Link} from "react-router-dom"
 
+const Insight = () => {
 
-const Insight = ({ title, data, dataKey, grid }) => {
-  
   return (
     <div className='insight' >
       {/*header*/}
@@ -109,14 +109,16 @@ const Insight = ({ title, data, dataKey, grid }) => {
         <div className='in-content'>
           <div className='in-con'>
             <div className='in-con-chart'>
-            <Chart data={regionAvgPerfData} title="Average performance by Region" dataKey="uvv"/>
+              <Chart data={regionAvgPerfData} title="Average performance by Region" dataKey="fig" />
             </div>
             <div className='in-con-line'>
-              Hello
-            </div> 
+              <Chart data={regionGenPerfData} title="General Performance by Region" dataKey="lip"/> 
+            </div>
           </div>
+          <Link to="/payment">
           <p className='in-con-p'>Click here to view dashboard</p>
-            <button className='in-con-but'>Print analysis</button>
+          </Link>
+          <button className='in-con-but'>Print analysis</button>
         </div>
       </div>
 
