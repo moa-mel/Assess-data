@@ -19,16 +19,16 @@ const Home = () => {
     <ul>
     <Link className='nav-link' to="/register" >
     <li className='nav-li' >
-    <a href="!#">Create Account</a>
+    Create Account
     </li>
     </Link>
-    <Link className='nav-log' to="/login" >
+    <Link className='nav-link' to="/login" >
     <li className='nav-li' >
-    <a href="!#">Login</a>
+    Login
     </li>
     </Link>
     <li className='nav-li' >
-    <a href="!#">Services</a>
+    Services
     </li>
     </ul>
    </div>
@@ -39,7 +39,7 @@ const Home = () => {
    </div>
   </div> 
    {/*Main*/}
-  <div className='wrapper'>
+  <div className='hero-wrapper'>
     <div className='left'>
     <h4 className='left-h4'>Over 40 million tested candidates</h4>
     <h2 className='left-h2'>Empowering the Future Today</h2>

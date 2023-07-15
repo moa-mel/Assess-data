@@ -1,0 +1,76 @@
+.create-insight{
+    background-color: #EBF2FF; 
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.ci-contain{
+    align-items: center;
+    justify-content: center;
+    padding: 3.3rem;
+}
+.ci-container{
+    background-color: #F8F8F8;
+    padding: 20px;
+    width: 850px;
+    border-radius: 16px;
+    height: 530px;
+    margin-left: 250px;
+}
+.ci-h2{
+    color: #49397C;
+    margin-left: 340px;
+    font-size: 1.5rem;
+}
+.ci-sort{
+    display: flex;
+    column-gap: 305px;
+    margin-left: 180px;
+}
+.ci-p{
+    color:#3F5FA0;
+    
+}
+.ci-img{
+
+}
+.ci-1but{
+  display: flex;
+  column-gap: 10px;
+  margin-left: 160px;
+}
+.ci-2but{
+    display: flex;
+  column-gap: 10px;
+  margin-left: 160px;
+}
+.ci-3but{
+    display: flex;
+  column-gap: 10px;
+  margin-left: 160px;
+}
+.ci-4but{
+    display: flex;
+  column-gap: 10px;
+  margin-left: 160px;
+}
+.ci-butt{
+    padding: 7px 18px;
+    border: 1px solid #F0F0F0;
+    background-color: #F0F0F0;
+    color: #3F5FA0;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    cursor: pointer; 
+}
+.ci-button{
+    padding: 7px 18px;
+    border: 1px solid #4F94FC;
+    background-color: #4F94FC;
+    color: #fff;
+    border-radius: 19px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    cursor: pointer; 
+    margin-left: 310px;
+}

@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logimg from '../../images/undraw_secure_login_pdn4 1.png';
 import './styles.css';
 
@@ -11,7 +11,6 @@ const Login = () => {
   });
 
   const [error, setError] = useState('');
-  const navigate = useNavigate();
 
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
@@ -21,7 +20,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const url = 'https://final-year-project-ya34.onrender.com/api/auth/login';
-      const { data:res } = await axios.post(url, data);
+      const { data: res } = await axios.post(url, data);
       localStorage.setItem("token", res.data);
       window.location = "/category";
     } catch (error) {
@@ -74,9 +73,9 @@ const Login = () => {
                 type="password"
               />
               <p className="input-p">Forgetten password?
-              <Link to="/resetemail">
-              click here
-              </Link>
+                <Link to="/resetemail">
+                  click here
+                </Link>
               </p>
               <br />
               {error && <div>{error}</div>}

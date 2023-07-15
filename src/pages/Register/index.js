@@ -125,12 +125,13 @@ const Register = () => {
                 className="input-text"
                 type="password"
               />
-              <br />
+              
               {error && <div>{error}</div>}
               {msg && <div>{msg}</div>}
               <button className="reg-button" type='submit"'>
                 Sign up
               </button>
+              <br />
               <div className="reg-p">
                 <p className="reg-agreed">I have read and agreed to the</p>
                 <p className="reg-terms">Terms of Service</p>

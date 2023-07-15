@@ -31,20 +31,20 @@
     padding: 0 1rem;
     justify-content: space-between;
     margin-top: 80px;
-    column-gap: 40px;
+    column-gap: 20px;
 }
 .login-form{
     top: 40%;
     left: 50%;
     border-radius: 8px;
     background-color: #35246E;
-    max-width: 700px;
+    width: 500px;
     height: 78%;
   }
   .login-form-p{
     color: #FFFFFF;
     font-size: 2.0rem;
-    margin-left: 100px;
+    margin-left: 130px;
   }
   label{
     color: #FFFFFF;
@@ -88,7 +88,7 @@
   }
 .login-p{
     display: flex;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 .login-agreed{
     color: #FFFFFF;

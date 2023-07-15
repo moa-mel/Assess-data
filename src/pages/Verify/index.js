@@ -48,11 +48,11 @@ const Verify = () => {
   }, [success]);
 
   return (
-    <div className="wrapper">
-      <div className="container">
+    <div className="ver-wrapper">
+      <div className="ver-container">
         {!errorMsg ? (
           <div className="lesser">
-            <h1>Kindly enter Email Verification code</h1>
+            <h1 className="ver-p">Kindly enter Email Verification code</h1>
             <p className="ver-parag">
               To Sign up, kindly enter the verification code sent to your email
               address
