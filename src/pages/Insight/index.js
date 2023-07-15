@@ -7,7 +7,7 @@ import { search } from 'react-icons-kit/feather/search'
 import { Icon } from "react-icons-kit"
 import { regionAvgPerfData } from "../../dummyData"
 import { regionGenPerfData } from "../../dummyData"
-import Chart from "../../components/chart/Chart"
+import Chart from "../../components/Chart/Chart"
 import {Link} from "react-router-dom"
 
 const Insight = () => {
