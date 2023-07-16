@@ -1,0 +1,247 @@
+.payment{
+    background-color: #EBF2FF; 
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.payment-header{
+    display: flex;
+   /* padding: 1rem; */
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    height: 65px;
+}
+.payment-search{
+    margin-top: 12px;
+    display: flex;
+    height: 2rem;
+    width: 25%;
+    margin-right: 135px ;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem 0.3rem;
+    font-size: small;
+	background-color: #F1F6FF;
+    border:1.5px solid #858585;
+    border-radius: 11px;
+}
+.payment-input{
+    outline: none;
+    background-color: transparent;
+    border: hidden;
+    height: 2rem;
+    width: 90%;
+    margin-right: 38px ;
+    margin-bottom: 1.5rem;
+    padding: 0.9rem 1.4rem;
+}
+.payment-search span {
+    font-size: 20px;
+	color: #000000;
+    right: 1vh;
+}
+.payment-end{
+    display: flex;
+    padding: 1rem;
+    column-gap: 19px;
+    margin-top: 1px;
+}
+.payment-e3{
+    margin-top:-3px;
+    width: 70%;
+    height: 30px;
+}
+.pay-main{
+    display: flex;
+}
+.pay-side{
+    flex: 1;
+}
+.pay-side-contain{
+    display: flex;
+}
+.pay-side-left{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 9px;
+}
+.pay-side-left-img{
+    margin-bottom: 7px;
+}
+.pay-side-right{
+    align-item: centre;
+    margin-left: 30px;
+    padding: 20px;
+    height: 100%;
+    color: #49397C;
+    background-color: #F3F4F6;
+    margin-right: 60px;
+    border-left: 1.5px solid grey;
+}
+.pay-side-right-p{
+    font-size: 1.1rem;
+    margin-bottom: 7px;
+}
+.pay-side-right-p1{
+    font-size: 1.1rem; 
+}
+.pay-side-right-p2{
+    border-bottom: 1.5px solid grey;
+}
+
+.pay-content{
+    flex: 3;
+}
+.pay-content-top{
+    display: flex;
+    column-gap: 16px;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+.pay-top-left{
+    align-item: centre;
+    margin-left: -50px;
+    padding: 20px;
+    color: #49397C;
+    background-color: #F3F4F6;
+}
+.pay-top{
+    display: flex;
+    column-gap: 2px;
+}
+.pay-left-h2{
+    color: #49397C;
+    font-size: 1.7rem;
+}
+.py-toppp{
+    display: flex;
+    column-gap: 18px;
+    margin-top: 4px;
+}
+.py-toppp-but{
+    padding: 5px 20px;
+    border: 1px solid #00122E;
+    background-color: #00122E;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: 200;
+    cursor: pointer;
+}
+.py-toppp-p{
+    color: #000000;
+}
+.py-hero{
+    display: flex;
+    column-gap: 76px;
+    margin-top: 4px;
+}
+.py-h-but{
+    padding: 7px 24px;
+    border: 1px solid #3278FF;
+    background-color: #3278FF;
+    color: #fff;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 350;
+    margin-left:52px;
+    cursor: pointer;
+}
+
+.py-toppp-p1{
+    color: #000000;
+    margin-top: 8px;
+    margin-left: -127px;
+    font-size: 2.1rem;
+}
+
+.pay-top-right{
+    align-item: centre;
+    margin-left: 30px;
+    padding: 20px;
+    height: 100%;
+    width: 35%;
+    color: #49397C;
+    background-color: #F3F4F6;
+}
+.pay-right-p1{
+    color: #000000;
+}
+.pay-right-p2{
+    color: black;
+}
+.pay-right-button{
+    padding: 7px 24px;
+    border: 1px solid #000000;
+    background-color: #E1EBFF;
+    color: #000000;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 250;
+    cursor: pointer;
+}
+.pay-down-up{
+    display: flex;
+    column-gap: 72px;
+    margin-left: -50px;
+}
+.pay-down-p1{
+   color: #49397C;
+   font-size: 2.0rem;
+}
+.pay-down-p{
+   color: #49397C;
+   margin-top: 14px;
+}
+.pay-down-img{
+    width: 40%;
+    height: 40%;
+    margin-top: 20px;
+}
+.pay-down-ig{
+    width: 40%;
+    height: 40%;
+    margin-top: 20px;
+}
+
+.pay-down-side{
+    display: flex;
+    column-gap: 16px;
+}
+.pay-other{
+    align-item: centre;
+    margin-left: -50px;
+    padding: 20px;
+    width: 90%;
+    color: #49397C;
+    background-color: #F3F4F6;
+}
+.pay-other-one{
+    display: flex;
+    column-gap: 106px;
+}
+.pay-other-p{
+    margin-top: 10px;
+}
+.pay-other-p1{
+    margin-top: 10px;
+}
+.pay-other-p2{
+    margin-top: 10px;
+}
+.pay-other1{
+    margin-top: 6px;
+    align-item: centre;
+    margin-left: -50px;
+    padding: 20px;
+    width: 90%;
+    color: #49397C;
+    background-color: #F3F4F6;
+}
+.pay-other2{
+    margin-top: 6px;
+    align-item: centre;
+    margin-left: -50px;
+    padding: 20px;
+    width: 90%;
+    color: #49397C;
+    background-color: #F3F4F6;
+}

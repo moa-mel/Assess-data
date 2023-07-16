@@ -18,6 +18,7 @@ import ResetOtp from "./pages/ResetOtp"
 import ResetPassword from "./pages/ResetPassword"
 import ResetConfirm from "./pages/ResetConfirm"
 import Payment from "./pages/Payment"
+import Feedback from "./pages/Feedback"
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
       <Route path="/resetpassword/:email" element={<ResetPassword/>} />
       <Route path="/confirm" element={<ResetConfirm/>} />
       <Route path="/payment" element={<Payment/>} />
+      <Route path="/feedback" element={<Feedback/>} />
+      
       </Routes>
   </Router>
     </div>

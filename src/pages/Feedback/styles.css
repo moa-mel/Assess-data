@@ -1,0 +1,12 @@
+.feedback{
+    background-color: #EBF2FF; 
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.feed-main{
+    background-color: #EBF2FF;
+    display: flex;
+}
+.feed-content{
+    flex: 3
+}

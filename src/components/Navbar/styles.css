@@ -1,0 +1,46 @@
+.navbar{
+    display: flex;
+   /* padding: 1rem; */
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    height: 65px;
+}
+.navbar-search{
+    margin-top: 12px;
+    display: flex;
+    height: 2rem;
+    width: 25%;
+    margin-right: 135px ;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem 0.3rem;
+    font-size: small;
+	background-color: #F1F6FF;
+    border:1.5px solid #858585;
+    border-radius: 11px;
+}
+.navbar-input{
+    outline: none;
+    background-color: transparent;
+    border: hidden;
+    height: 2rem;
+    width: 90%;
+    margin-right: 38px ;
+    margin-bottom: 1.5rem;
+    padding: 0.9rem 1.4rem;
+}
+.navbar-search span {
+    font-size: 20px;
+	color: #000000;
+    right: 1vh;
+}
+.navbar-end{
+    display: flex;
+    padding: 1rem;
+    column-gap: 19px;
+    margin-top: 1px;
+}
+.navbar-e3{
+    margin-top:-3px;
+    width: 70%;
+    height: 30px;
+}
