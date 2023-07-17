@@ -31,6 +31,8 @@ const ResetEmail = () => {
 
   return (
     <div className='reset-email'>
+    <div className='re-contain'>
+    <div className='reset-email-contain'>
        <div className='reset-container'>
            <img className='re-img' src={lock} alt=''/>
            <h2 className='re-h2'>Reset Password</h2>
@@ -55,6 +57,8 @@ const ResetEmail = () => {
                 Reset Password
                </button>
              </form>
+       </div>
+       </div>
        </div>
     </div>
   )

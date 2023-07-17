@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import "./styles.css"
 import axios from 'axios';
 import lock from "../../images/Password security icon.png"
@@ -14,14 +14,14 @@ const ResetOtp = () => {
   const [digitSix, setDigitSix] = useState('');
   // const [email, setEmail] = useState(params.get('email'));
   const [params, setParams] = useSearchParams();
-  const {email} = useParams();
-console.log("loaded",email)
+  const { email } = useParams();
+  console.log("loaded", email)
   const handleSubmit = async e => {
     //TODO: look for how u would pass the code down to the function, create a state for the code and pass it down to the function
     e.preventDefault();
     const token =
       digitOne + digitTwo + digitThree + digitFour + digitFive + digitSix;
-      await axios
+    await axios
       .post(
         `https://final-year-project-ya34.onrender.com/api/auth/confirm-token`,
         { token, email }
@@ -29,64 +29,68 @@ console.log("loaded",email)
       .then(res => {
         console.log(res.data)
         if (res.data.success) {
-            navigate(`/resetpassword/${email}`)
-            alert('Password pending.')
+          navigate(`/resetpassword/${email}`)
+          alert('Password pending.')
         } else {
-            alert('server err / wrong OTP')
+          alert('server err / wrong OTP')
         }
-    }).catch(err => {
+      }).catch(err => {
         console.log(err)
-    })
+      })
   };
 
   return (
     <div className='reset-otp'>
-      <div className='ro-container'>
-      <img className='ro-img' src={lock} alt=''/>
-      <h2 className='ro-h2'>Reset Password</h2>
-      <p className='ro-p'>
-      Enter the OTP code that was sent to your mail to proceed 
-      <br/> to the next stage
-      </p>
-        <form className='ro-form'onSubmit={handleSubmit} method="POST">
-          <input 
-          className='ro-input'
-          type="text"
-          maxLength="1"
-          onChange={e => setDigitOne(e.target.value)}/>
-          <input 
-          className='ro-input'
-          type="text"
-          maxLength="1"
-          onChange={e => setDigitTwo(e.target.value)}/>
-          <input 
-          className='ro-input'
-          type="text"
-          maxLength="1"
-          onChange={e => setDigitThree(e.target.value)}/>
-          <input 
-          className='ro-input'
-          type="text"
-          maxLength="1"
-          onChange={e => setDigitFour(e.target.value)}  
-        />
-          <input 
-          className='ro-input'
-          type="text"
-          maxLength="1"
-          onChange={e => setDigitFive(e.target.value)}
-          />
-          <input 
-          className='ro-input'
-          type="text"
-          maxLength="1"
-          onChange={e => setDigitSix(e.target.value)}/>
-          <br/>
-          <br/>
-          <button className='ro-button'>
-           Enter
-          </button>
-        </form>
+    <div className='ro-contain'>
+      <div className='reset-otp-contain'>
+        <div className='ro-container'>
+          <img className='ro-img' src={lock} alt='' />
+          <h2 className='ro-h2'>Reset Password</h2>
+          <p className='ro-p'>
+            Enter the OTP code that was sent to your mail to proceed
+            <br /> to the next stage
+          </p>
+          <form className='ro-form' onSubmit={handleSubmit} method="POST">
+            <input
+              className='ro-input'
+              type="text"
+              maxLength="1"
+              onChange={e => setDigitOne(e.target.value)} />
+            <input
+              className='ro-input'
+              type="text"
+              maxLength="1"
+              onChange={e => setDigitTwo(e.target.value)} />
+            <input
+              className='ro-input'
+              type="text"
+              maxLength="1"
+              onChange={e => setDigitThree(e.target.value)} />
+            <input
+              className='ro-input'
+              type="text"
+              maxLength="1"
+              onChange={e => setDigitFour(e.target.value)}
+            />
+            <input
+              className='ro-input'
+              type="text"
+              maxLength="1"
+              onChange={e => setDigitFive(e.target.value)}
+            />
+            <input
+              className='ro-input'
+              type="text"
+              maxLength="1"
+              onChange={e => setDigitSix(e.target.value)} />
+            <br />
+            <br />
+            <button className='ro-button'>
+              Enter
+            </button>
+          </form>
+        </div>
+        </div>
       </div>
     </div>
   )

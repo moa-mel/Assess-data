@@ -1,9 +1,25 @@
 .reset-otp{
-    background-color:#FFFFFF;
+    background-color: #EBF2FF; 
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.ro-contain{
+    align-items: center;
+    justify-content: center;
+    padding: 3.3rem;
+}
+.reset-otp-contain{
+    background-color: #F8F8F8;
+    padding: 20px;
+    width: 850px;
+    color: white;
+    height: 530px;
+    border-radius: 16px;
+    margin-left: 240px;
 }
 .ro-container{
-    margin-left: 540px;
-    margin-top: 100px;
+    margin-left: 200px;
+    margin-top: 80px;
 }
 .ro-img{
     margin-left: 120px ;
@@ -17,7 +33,7 @@
     color: #000000;
 }
 .ro-form{
-    background-color:#FFFFFF;
+    background-color:#F8F8F8;
 }
 .ro-input{
     width: 40px;

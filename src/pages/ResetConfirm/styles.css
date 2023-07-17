@@ -1,9 +1,25 @@
 .reset-confirm{
-    background-color:#FFFFFF;
+    background-color: #EBF2FF; 
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.rc-container{
+    align-items: center;
+    justify-content: center;
+    padding: 3.3rem;
+}
+.reset-confirm-contain{
+    background-color: #F8F8F8;
+    padding: 20px;
+    width: 850px;
+    color: white;
+    height: 530px;
+    border-radius: 16px;
+    margin-left: 240px;
 }
 .rc-contain{
-    margin-left: 540px;
-    margin-top: 120px;
+    margin-left: 200px;
+    margin-top: 80px;
 }
 .rc-img{
     margin-left: 100px ;

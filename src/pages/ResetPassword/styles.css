@@ -1,9 +1,25 @@
 .reset-password{
-    background-color:#FFFFFF;
+    background-color: #EBF2FF; 
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.rp-container{
+    align-items: center;
+    justify-content: center;
+    padding: 3.3rem;
+}
+.reset-password-contain{
+    background-color: #F8F8F8;
+    padding: 20px;
+    width: 850px;
+    color: white;
+    height: 530px;
+    border-radius: 16px;
+    margin-left: 240px;
 }
 .rp-contain{
-    margin-left: 540px;
-    margin-top: 110px;
+    margin-left: 200px;
+    margin-top: 80px;
 }
 .rp-img{
     margin-left: 120px ;
@@ -14,7 +30,7 @@
     margin-left: 40px ;
 }
 .rp-form{
-    background-color:#FFFFFF;
+    background-color:#F8F8F8;
 }
 .new-password{
     display: flex;
