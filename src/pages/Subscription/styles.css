@@ -1,0 +1,12 @@
+.subscription{
+    background-color: #EBF2FF; 
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.subscription-main{
+    background-color: #EBF2FF;
+    display: flex;
+}
+.subscription-content{
+    flex: 3
+}

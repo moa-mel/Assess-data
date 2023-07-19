@@ -11,7 +11,7 @@
     height: 100%;
     color: #49397C;
     margin-right: 20px;
-    border-right: 1.5px solid grey;
+    border-right: 1.5px solid grey; 
 }
 .side-1{
   display: flex;
