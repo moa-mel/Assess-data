@@ -7,7 +7,7 @@ import G44 from "../../images/Group 44.png"
 import { Link } from 'react-router-dom';
 
 const Category = () => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState("")
   
   return (
     <div className='category'>
@@ -19,7 +19,8 @@ const Category = () => {
         your dashboard. You can always make changes anytime you want in your profile</h4>
        <div className='category-img'>
        <img className='cat-img'  src={G41} alt=''/>
-       <img className='cat-img' onClick={(e)=>setActive(true)} src={G42} alt=''/>
+       <img className={active==="school"?'cat-imgs-select':"cat-imgs"}
+       onClick={(e)=>setActive("school")} src={G42} alt=''/>
        <img className='cat-img'  src={G43} alt=''/>
        <img className='cat-img'  src={G44} alt=''/>
        </div>
