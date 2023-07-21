@@ -10,6 +10,7 @@ import menu from "../../images/menu_book 1.png"
 import inbox from "../../images/move_to_inbox 1.png"
 import Overview from "../../images/Overview.png"
 import payment from "../../images/payment 1.png"
+import {Link} from "react-router-dom"
 
 const Sidebar = () => {
   return (
@@ -38,8 +39,10 @@ const Sidebar = () => {
           </div>
           <div className='side-6'>
             <img className='side-left-img1' src={cog} alt="" />
+            <Link to='/settings'>
             <p className='side-right-p5'>Settings</p>
-          </div>
+            </Link>
+            </div>
           <Divider bg='grey' />
           <br />
           <br />

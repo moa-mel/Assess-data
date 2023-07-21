@@ -20,6 +20,7 @@ import ResetConfirm from "./pages/ResetConfirm"
 import Payment from "./pages/Payment"
 import Feedback from "./pages/Feedback"
 import Subscription from "./pages/Subscription"
+import Settings from "./pages/Settings"
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
       <Route path="/payment" element={<Payment/>} />
       <Route path="/feedback" element={<Feedback/>} />
       <Route path="/subscription" element={<Subscription/>} />
+      <Route path="/settings" element={<Settings/>}/>
       </Routes>
   </Router>
     </div>

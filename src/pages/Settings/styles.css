@@ -1,0 +1,12 @@
+.setting{
+    background-color: #EBF2FF; 
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.setting-main{
+    background-color: #EBF2FF;
+    display: flex;
+}
+.setting-content{
+    flex: 3
+}
