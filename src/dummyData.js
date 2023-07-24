@@ -33,19 +33,20 @@ export const regionAvgPerfData = [
   export const regionGenPerfData = [
     {
       name: 'Passesd',
-      "lip" : 1.2,
-      "pil": 3.9,
+      "lip" : 1,
+      "pil": 3,
       "vul": 2,
     },
     {
         name: 'Failed',
-        "lip" : 2.5,
+        "lip" : 2,
+        "pil": 0.8,
         "vul": 3,
       },
       {
         name: 'Cancelled',
-        "lip" : 4.7,
-        "pil": 1.8,
+        "lip" : 4,
+        "pil": 1,
         "vul": 5, 
       },
   ];

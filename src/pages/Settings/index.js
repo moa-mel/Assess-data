@@ -26,21 +26,13 @@ const Settings = () => {
         {/*<div className="set-input"> */}
               <PhoneInput
                 placeholder="Enter phone number"
-                country="NG"
                 value={value}
                 name="phoneNumber"
                 type="text"
                 onChange={setValue}
                 className="set-top-input"
-                containerClass="my-container-class"
-                inputClass="my-input-class"
-                containerStyle={{
-                  border: "10px solid #E1E1E1",
-                  background: "E1E1E1"
-                }}
-                inputStyle={{
-                  background: "E1E1E1"
-                }}
+                country={'NG'}
+                specialLabel={''}
               />
              {/* </div> */}
           </div>

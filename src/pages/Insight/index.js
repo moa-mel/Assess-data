@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./styles.css"
 import { Select } from '@chakra-ui/react'
 import Logo from "../../images/Oau_logo-removebg-preview 2.png"
@@ -8,9 +8,25 @@ import { Icon } from "react-icons-kit"
 import { regionAvgPerfData } from "../../dummyData"
 import { regionGenPerfData } from "../../dummyData"
 import Chart from "../../components/Chart/Chart"
+/*import Chartbar from "../../components/Chartbar" */
 import {Link} from "react-router-dom"
+import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const Insight = () => {
+const Insight = ({data}) => {
+  const [chartType, setChartType] = useState('line');
+  const handleChangeChartType = (e) => {
+    setChartType(e.target.value);
+  };
+
+  const modifiedData = regionGenPerfData.map((entry) => ({
+    ...entry,
+    lipAndPil: entry.lip + entry.pil + entry.vul,
+  }));
+
+  const modData = regionAvgPerfData.map((entry) => ({
+    ...entry,
+    FigAndGif: entry.fig + entry.gif,
+  }));
 
   return (
     <div className='insight' >
@@ -39,10 +55,12 @@ const Insight = () => {
           <div className='drop-1'>
             <Select bg='#35246E'
               borderColor='#35246E'
+              value={chartType} 
+              onChange={handleChangeChartType}
               color='grey' placeholder='Select format'>
-              <option value='option1'>linechart</option>
-              <option value='option2'>barchart</option>
-              <option value='option3'>piechart</option>
+              <option value='line'>linechart</option>
+              <option value='bar'>barchart</option>
+              <option value='pie'>piechart</option>
             </Select>
           </div>
           <div className='drop-2'>
@@ -109,11 +127,73 @@ const Insight = () => {
         <div className='in-content'>
           <div className='in-con'>
             <div className='in-con-chart'>
+            {chartType === 'line' ? (
               <Chart data={regionAvgPerfData} title="Average performance by Region" dataKey="fig" />
-            </div>
+              ) : chartType === 'bar' ?(
+                <ResponsiveContainer width="100%" aspect={4 / 3}>
+                <BarChart data={regionAvgPerfData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="name" />
+                      <YAxis />
+                      <Tooltip />
+                      <Legend />
+                      <Bar dataKey="fig" fill="#EBD579" />
+                      <Bar dataKey="gif" fill="#49397C" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                  ) : (
+                    <ResponsiveContainer width="100%" aspect={4 / 3}>
+                    <PieChart width={400} height={400}>
+                      <Pie
+                        dataKey="FigAndGif"
+                        isAnimationActive={false}
+                        data={modData}
+                        cx="50%"
+                        cy="50%"
+                        outerRadius={80}
+                        fill="#49397C"
+                        label
+                      />
+                      <Tooltip />
+                    </PieChart>
+                  </ResponsiveContainer>
+
+                )}
+              </div>
             <div className='in-con-line'>
+            {chartType === 'line' ? (
               <Chart data={regionGenPerfData} title="General Performance by Region" dataKey="lip"/> 
-            </div>
+              ) : chartType === 'bar' ?(
+                <ResponsiveContainer width="100%" aspect={4 / 3}>
+                <BarChart data={regionGenPerfData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="name" />
+                      <YAxis />
+                      <Tooltip />
+                      <Legend />
+                      <Bar dataKey="lip" fill="#EBD579" />
+                      <Bar dataKey="pil" fill="#EBD579" />
+                      <Bar dataKey="vul" fill="#EBD579" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                  ) : (
+                    <ResponsiveContainer width="100%" aspect={4 / 3}>
+                    <PieChart width={400} height={400}>
+                      <Pie
+                        dataKey="lipAndPil"
+                        isAnimationActive={false}
+                        data={modifiedData}
+                        cx="50%"
+                        cy="50%"
+                        outerRadius={80}
+                        fill="#49397C"
+                        label
+                      />
+                      <Tooltip />
+                    </PieChart>
+                  </ResponsiveContainer>
+                  )}
+              </div>
           </div>
           <Link to="/payment">
           <p className='in-con-p'>Click here to view dashboard</p>
