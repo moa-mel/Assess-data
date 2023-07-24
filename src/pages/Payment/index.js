@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './styles.css'
 import { Select } from '@chakra-ui/react'
 import Logo from "../../images/Oau_logo-removebg-preview 2.png"
@@ -22,6 +22,11 @@ import {Link} from "react-router-dom"
 import { Progress } from '@chakra-ui/react'
 
 const Payment = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
 
   return (
     <div className='payment'>
@@ -111,18 +116,29 @@ const Payment = () => {
           <div className='pay-content-down'>
              <div className='pay-down-up'>
              <p className='pay-down-p1'>Payment</p>
-             <p className='pay-down-p'>All payment</p>
-             <p className='pay-down-p'>Pending</p>
-             <p className='pay-down-p'>Complete</p>
+             <p 
+             className={activeTab === 0 ? 'active' : ''}
+          onClick={() => handleTabClick(0)}
+             >All payment</p>
+             <p 
+             className={activeTab === 1 ? 'active' : ''}
+             onClick={() => handleTabClick(1)}
+             >Failed</p>
+             <p 
+             className={activeTab === 2 ? 'active' : ''}
+          onClick={() => handleTabClick(2)}
+             >Complete</p>
              <div className='pay-down-side'>
              <img className='pay-down-img' src={sort} alt='' />
              <img className='pay-down-ig' src={sch} alt='' />
              </div>
              </div>
              <br/>
-
-             <div className='pay-other'>
-              <div className='pay-other-one'>
+             
+             {activeTab === 0 &&
+              <>
+             <div className="pay-other">  
+             <div className='pay-other-one'>
                 <img className='pay-other-1' src={G20} alt=''/>
                 <p className='pay-other-p'>Invoice_2021/10.pdf</p>
                 <p className='pay-other-p1'>Date of invoice</p>
@@ -147,6 +163,18 @@ const Payment = () => {
                 <p className='pay-other-p2'>Oct 02, 2021</p>
                 <img className='pay-other-img' src={dots} alt=''/>
               </div>
+             </div>
+            </>
+            }
+            
+             <div className='' id="Failed">
+             {activeTab === 1 &&
+             <p>Failed, sorry!</p> }
+             </div>
+
+             <div className='' id="Complete">
+             {activeTab === 2 &&
+             <p>complete, yeah.</p> }
              </div>
 
           </div>

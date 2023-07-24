@@ -180,6 +180,7 @@
 }
 .pay-down-up{
     display: flex;
+    align-items: center;
     column-gap: 72px;
     margin-left: -50px;
 }
@@ -194,17 +195,20 @@
 .pay-down-img{
     width: 40%;
     height: 40%;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 .pay-down-ig{
     width: 40%;
     height: 40%;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .pay-down-side{
     display: flex;
     column-gap: 16px;
+}
+p{
+    color: #49397C; 
 }
 .pay-other{
     align-item: centre;
