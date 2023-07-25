@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logimg from '../../images/undraw_secure_login_pdn4 1.png';
 import './styles.css';
 
@@ -11,7 +11,7 @@ const Login = () => {
   });
 
   const [error, setError] = useState('');
-
+   const navigate = useNavigate()
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
   };
@@ -21,8 +21,11 @@ const Login = () => {
     try {
       const url = 'https://final-year-project-ya34.onrender.com/api/auth/login';
       const { data: res } = await axios.post(url, data);
-      localStorage.setItem("token", res.data);
-      window.location = "/category";
+      console.log(res)
+     /* localStorage.setItem("token", res.data); */
+      localStorage.setItem("accessToken", res.accessToken);
+      /*window.location = "/category";*/
+      navigate("/category")
     } catch (error) {
       if (
         error.response &&

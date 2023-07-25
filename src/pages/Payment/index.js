@@ -20,15 +20,47 @@ import sch from "../../images/Search.png"
 import dots from "../../images/ph_dots-three-vertical-thin.png"
 import {Link} from "react-router-dom"
 import { Progress } from '@chakra-ui/react'
+import axios from 'axios';
 
-const Payment = () => {
+const Payment = () =>{
   const [activeTab, setActiveTab] = useState(0);
-
+  const [paymentInitialized, setPaymentInitialized] = useState(false);
+  const [url, setUrl]  = useState('')
+  console.log(url)
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
 
-  return (
+  const initializePayment = async (e) => {
+
+    const token =  localStorage.getItem("accessToken")
+    console.log("okay")
+    e.preventDefault()
+    try {
+      const response = await axios.post('https://final-year-project-ya34.onrender.com/api/transaction/make-payment', 
+      {
+        
+      }, 
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          "x-auth-token": `${token}`,
+          // Add any required headers here, such as authentication tokens
+        },
+      });
+      if (response.data.success) {
+        // Payment initialized successfully
+        setUrl(response.data.initializationUrl);
+        setPaymentInitialized(true);
+      } else {
+        // Handle error if needed
+      }
+    } catch (error) {
+      // Handle any network or other errors
+    }
+  };
+ 
+  return(
     <div className='payment'>
       {/*header*/}
       <div className='payment-header'>
@@ -89,12 +121,18 @@ const Payment = () => {
                   <h2 className="pay-left-h2">Subscription</h2> 
                   </Link>
                   <div className="py-toppp">
-                    <button className="py-toppp-but">Pay per Report</button>
-                    <p className="py-toppp-p">plan</p>
+                  {!paymentInitialized ? (
+                    <p className="py-toppp-p" onClick={initializePayment}>plan</p>
+                    ) : (
+                      <p>Payment Initialized!</p>
+                    )}
+                    <Link to={url}>
+                    <button className="py-toppp-but" >Pay per Report</button>
+                    </Link>
                   </div>
                   <div className="py-hero">
                     <div className="py-wrap">
-                    <p className="py-wrap-p">300 of 500 users</p>
+                    <p className="py-wrap-p">30 of 500 users</p>
                     <Progress colorScheme='purple' size='sm' value={20} />
                     </div>
                     <button className="py-h-but">Upgrade Plan</button>
@@ -146,24 +184,7 @@ const Payment = () => {
                 <img className='pay-other-img' src={dots} alt=''/>
               </div>
              </div>
-             <div className='pay-other1'>
-              <div className='pay-other-one'>
-                <img className='pay-other-1' src={G20} alt=''/>
-                <p className='pay-other-p'>Invoice_2021/10.pdf</p>
-                <p className='pay-other-p1'>Date of invoice</p>
-                <p className='pay-other-p2'>Oct 02, 2021</p>
-                <img className='pay-other-img' src={dots} alt=''/>
-              </div>
-             </div>
-             <div className='pay-other2'>
-              <div className='pay-other-one'>
-                <img className='pay-other-1' src={G20} alt=''/>
-                <p className='pay-other-p'>Invoice_2021/10.pdf</p>
-                <p className='pay-other-p1'>Date of invoice</p>
-                <p className='pay-other-p2'>Oct 02, 2021</p>
-                <img className='pay-other-img' src={dots} alt=''/>
-              </div>
-             </div>
+             
             </>
             }
             

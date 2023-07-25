@@ -20,6 +20,7 @@ const Navbar = () => {
     <div className="navbar-end">
       <Select variant='unstyled' placeholder="Mike">
         <option value='option1'>Profile</option>
+        <option value='option1'>Log Out</option>
       </Select>
       <img className='navbar-e3' src={E3} alt="" />
     </div>

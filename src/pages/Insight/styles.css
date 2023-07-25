@@ -74,6 +74,7 @@
 }
 .in-main{
     display: flex;
+    column-gap: 5px;
     margin-top: 10px;
 }
 .in-side{
@@ -83,71 +84,81 @@
     align-item: centre;
     margin-left: 30px;
     padding: 20px;
-    height: 70px;
+    height: 95px;
     color: #49397C;
     background-color: #F3F4F6;
     margin-right: 60px;
 }
 .in-side-p2{
-    margin-top: 10px;
+    margin-top: 5px;
     align-item: centre;
     margin-left: 30px;
     padding: 20px;
-    height: 70px;
+    height: 95px;
     color: #49397C;
     background-color: #F3F4F6;
     margin-right: 60px;
 }
 .in-side-p3{
-    margin-top: 10px;
+    margin-top: 5px;
     align-item: centre;
     margin-left: 30px;
     padding: 20px;
-    height: 70px;
+    height: 95px;
     color: #49397C;
     background-color: #F3F4F6;
     margin-right: 60px;
 }
 .in-side-p4{
-    margin-top: 10px;
+    margin-top: 5px;
     align-item: centre;
     margin-left: 30px;
     padding: 20px;
-    height: 70px;
+    height: 95px;
     color: #49397C;
     background-color: #F3F4F6;
     margin-right: 60px;
 }
 .in-side-p5{
-    margin-top: 10px;
+    margin-top: 5px;
     align-item: centre;
     margin-left: 30px;
     padding: 20px;
-    height: 70px;
+    height: 95px;
     color: #49397C;
     background-color: #F3F4F6;
     margin-right: 60px;
 }
 .in-content{
     flex: 3;
+    margin-right: 140px;
 }
 .in-con{
     display: flex;
-    column-gap: 10px;
-    margin-right: 79px;
+    column-gap: 40px;
+    margin-right: 130px;
 }
 .in-con-chart{
     background-color: #F3F4F6;
-    width: 60%;
+    width: 100%;
+    padding: 20px;
+    height: 70%;
 }
 .in-con-line{
     background-color: #F3F4F6;
-    width: 60%;
+    width: 100%;
+    padding: 20px;
+    height: 70%;
+}
+.sigh-uhh{
+    margin-top: -200px;
+    margin-left: 330px;
 }
 .in-con-p{
    color: #FF0000;
 }
 .in-con-but{
+    margin-top: 10px;
     padding: 7px 24px;
     border: 1px solid #35246E;
     background-color: #35246E;

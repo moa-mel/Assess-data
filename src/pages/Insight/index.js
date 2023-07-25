@@ -10,12 +10,29 @@ import { regionGenPerfData } from "../../dummyData"
 import Chart from "../../components/Chart/Chart"
 /*import Chartbar from "../../components/Chartbar" */
 import {Link} from "react-router-dom"
-import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, PieChart, Pie, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import Navbar from "../../components/Navbar"
+import html2pdf from 'html2pdf.js';
+
 
 const Insight = ({data}) => {
   const [chartType, setChartType] = useState('line');
+ 
   const handleChangeChartType = (e) => {
     setChartType(e.target.value);
+  };
+
+  const handleDownload = () => {
+    const element = document.querySelector('#main-content'); // Target the main content wrapper
+    const opt = {
+      margin: 20,
+      filename: 'main_content.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' },
+    };
+
+    html2pdf().from(element).set(opt).save();
   };
 
   const modifiedData = regionGenPerfData.map((entry) => ({
@@ -31,23 +48,7 @@ const Insight = ({data}) => {
   return (
     <div className='insight' >
       {/*header*/}
-      <div className='insight-header'>
-        <img className='insight-logo' src={Logo} alt="" />
-        <div className="insight-search">
-          <input type="text"
-            placeholder="Search..."
-            className='insight-input'
-          />
-          <span className='re-span' ><Icon icon={search} size={15} /></span>
-        </div>
-        <div className="insight-end">
-          <Select variant='unstyled' placeholder="Mike">
-            <option value='option1'>Profile</option>
-            <option value='option2'>LogOut</option>
-          </Select>
-          <img className='insight-e3' src={E3} alt="" />
-        </div>
-      </div>
+      <Navbar />
       {/*navbar*/}
       <div className='insight-nav'>
         <h1 className='insight-nav-h'>INSIGHTS</h1>
@@ -104,7 +105,7 @@ const Insight = ({data}) => {
       </div>
 
       {/*main component*/}
-      <div className='in-main'>
+      <div className='in-main' id="main-content">
         {/*sidebar*/}
         <div className='in-side'>
           <p className='in-side-p1'>NO OF STUDENTS<br />
@@ -195,13 +196,16 @@ const Insight = ({data}) => {
                   )}
               </div>
           </div>
-          <Link to="/payment">
-          <p className='in-con-p'>Click here to view dashboard</p>
-          </Link>
-          <button className='in-con-but'>Print analysis</button>
-        </div>
+          
+          </div> 
+      </div><br/>
+      <div className="sigh-uhh">
+      <Link to="/payment">
+      <p className='in-con-p'>Click here to view dashboard</p>
+      </Link>
+      <button className='in-con-but' onClick={handleDownload}>Print analysis</button>
       </div>
-
+      
     </div>
   )
 }
