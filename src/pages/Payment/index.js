@@ -101,13 +101,15 @@ const Payment = ({paymentSuccessful}) => {
 
  useEffect(() =>{
   fetchTransactionHistory()
-} ,[fetchTransactionHistory, paymentInitialized]) 
+} ,[]) 
 
   return(
     <div className='payment'>
       {/*header*/}
       <div className='payment-header'>
+      <Link to='/'>
         <img className='payment-logo' src={Logo} alt="" />
+        </Link>
         <div className="payment-search">
           <input type="text"
             placeholder="Search..."
@@ -217,35 +219,27 @@ const Payment = ({paymentSuccessful}) => {
             <br />
 
             {activeTab === 0 &&
-              <>
-                <div className="pay-other">
-                  <div className='pay-other-one'>
-                    <img className='pay-other-1' src={G20} alt='' />
-                    <p className='pay-other-p'>Invoice_2021/10.pdf</p>
-                    <p className='pay-other-p1'>Date of invoice</p>
-                    <p className='pay-other-p2'>Oct 02, 2021</p>
-                    <img className='pay-other-img' src={dots} alt='' />
-                  </div>
-                </div>
-                {transactions?.map(( transaction) =>(
-                  <TableContainer>
-  <Table size='sm'>
-    <Thead>
-      <Tr>
-        <Th>TransactionReference</Th>
-        <Th>Amount</Th>
-      </Tr>
-    </Thead>
-    <Tbody>
-      <Tr>
+              <TableContainer  >
+              <Table size='sm'>
+                <Thead>
+                  <Tr>
+                    <Th>TransactionReference</Th>
+                    <Th>Amount</Th>
+                    <Th>Date/Time</Th>
+                  </Tr>
+                </Thead>
+                <Tbody>
+                {transactions?.map(( transaction, i) =>(  
+      <Tr key={i}>
         <Td>{transaction.transactionReference}</Td>
         <Td>{transaction.amount}</Td>
+        <Td>{transaction.createdAt}</Td>
       </Tr>
-    </Tbody>
-  </Table>
-</TableContainer>
                ))}
-              </>
+              
+    </Tbody>
+    </Table>
+  </TableContainer>
             }
 
             <div className='' id="Failed">

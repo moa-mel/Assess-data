@@ -5,11 +5,14 @@ import Logo from "../../images/Oau_logo-removebg-preview 2.png"
 import E3 from "../../images/Ellipse 3.png"
 import { search } from 'react-icons-kit/feather/search'
 import { Icon } from "react-icons-kit"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
   return (
     <div className='navbar'>
+    <Link to="/">
     <img className='navbar-logo' src={Logo} alt="" />
+    </Link>
     <div className="navbar-search">
       <input type="text"
         placeholder="Search..."
