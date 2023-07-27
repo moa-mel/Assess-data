@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./styles.css"
 import { Link } from 'react-router-dom';
 import mono from "../../images/mono-icons_filter.png"
 
 const CreateInsight = () => {
+  const [active, setActive] = useState("")
   return (
     <div className="create-insight">
       <div className="ci-contain">
@@ -38,7 +39,8 @@ const CreateInsight = () => {
           <br />
           <div className="ci-4but">
             <button className='ci-butt'>Disabilities</button>
-            <button className='ci-butt'>Region</button>
+            <button className={active==="region"?'ci-butts-select':"ci-butts"}
+            onClick={(e)=>setActive("region")}>Region</button>
             <button className='ci-butt'>Region</button>
             <button className='ci-butt'>Disabilities</button>
           </div>

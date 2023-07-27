@@ -118,9 +118,9 @@ const Payment = ({paymentSuccessful}) => {
           <span className='py-span' ><Icon icon={search} size={15} /></span>
         </div>
         <div className="payment-end">
-          <Select variant='unstyled' placeholder="Mike">
+        {/*  <Select variant='unstyled' placeholder="Profile">
             <option value='option1'>Profile</option>
-          </Select>
+  </Select> */}
           <img className='payment-e3' src={E3} alt="" />
         </div>
       </div>
@@ -191,7 +191,7 @@ const Payment = ({paymentSuccessful}) => {
             </div>
             <div className="pay-top-right">
               <p className="pay-right-p1">Next Payment </p> <br />
-              <p className="pay-right-p2">on February 27, 2021</p> <br />
+              <p className="pay-right-p2">on February 27, 2024</p> <br />
               <button className="pay-right-button">Manage payment</button> <br />
             </div>
           </div>
