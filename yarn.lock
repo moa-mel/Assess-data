@@ -3793,7 +3793,7 @@ abab@^1.0.0:
   resolved "https://registry.npmjs.org/abab/-/abab-1.0.4.tgz"
   integrity sha512-I+Wi+qiE2kUXyrRhNsWv6XsjUTBJjSoVSctKNBfLG5zG/Xe7Rjbxf13+vqYHNTwHaFU+FtSlVxOCTiMEVtPv0A==
 
-abab@^2.0.3, abab@^2.0.5:
+abab@^2.0.3, abab@^2.0.5, abab@^2.0.6:
   version "2.0.6"
   resolved "https://registry.npmjs.org/abab/-/abab-2.0.6.tgz"
   integrity sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==
@@ -4961,11 +4961,6 @@ cosmiconfig@^7.0.0:
     parse-json "^5.0.0"
     path-type "^4.0.0"
     yaml "^1.10.0"
-
-country-flag-icons@^1.5.4:
-  version "1.5.7"
-  resolved "https://registry.npmjs.org/country-flag-icons/-/country-flag-icons-1.5.7.tgz"
-  integrity sha512-AdvXhMcmSp7nBSkpGfW4qR/luAdRUutJqya9PuwRbsBzuoknThfultbv7Ib6fWsHXC43Es/4QJ8gzQQdBNm75A==
 
 cross-fetch@^3.1.5:
   version "3.1.8"
@@ -6578,6 +6573,11 @@ fs.realpath@^1.0.0:
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
 
+fsevents@^2.3.2, fsevents@~2.3.2:
+  version "2.3.2"
+  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
+
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz"
@@ -7138,13 +7138,6 @@ ini@^1.3.5:
   version "1.3.8"
   resolved "https://registry.npmjs.org/ini/-/ini-1.3.8.tgz"
   integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
-
-input-format@^0.3.8:
-  version "0.3.8"
-  resolved "https://registry.npmjs.org/input-format/-/input-format-0.3.8.tgz"
-  integrity sha512-tLR0XRig1xIcG1PtIpMd/uoltvkAI62CN9OIbtj4/tEJAkqTCQLNHUZ9N4M46w0dopny7Rlt/lRH5Xzp7e6F+g==
-  dependencies:
-    prop-types "^15.8.1"
 
 insert-css@^2.0.0:
   version "2.0.0"
@@ -8265,11 +8258,6 @@ levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
-
-libphonenumber-js@^1.10.37:
-  version "1.10.37"
-  resolved "https://registry.npmjs.org/libphonenumber-js/-/libphonenumber-js-1.10.37.tgz"
-  integrity sha512-Z10PCaOCiAxbUxLyR31DNeeNugSVP6iv/m7UrSKS5JHziEMApJtgku4e9Q69pzzSC9LnQiM09sqsGf2ticZnMw==
 
 lilconfig@^2.0.3, lilconfig@^2.0.5, lilconfig@^2.1.0:
   version "2.1.0"
@@ -9900,17 +9888,6 @@ react-password-checklist@^1.4.3:
   dependencies:
     styled-components "^5.3.5"
 
-react-phone-number-input@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.npmjs.org/react-phone-number-input/-/react-phone-number-input-3.3.0.tgz"
-  integrity sha512-6d1lq9parRGnVz6laEN7ijU7MeUCkFEJsTnzB/97nVrm/WE48EDEV5/2bu08mzfZjvX6shpryqG0DUCNiP07Cg==
-  dependencies:
-    classnames "^2.3.1"
-    country-flag-icons "^1.5.4"
-    input-format "^0.3.8"
-    libphonenumber-js "^1.10.37"
-    prop-types "^15.8.1"
-
 react-refresh@^0.11.0, "react-refresh@>=0.10.0 <1.0.0":
   version "0.11.0"
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.11.0.tgz"
@@ -10712,6 +10689,15 @@ source-map-loader@^3.0.0:
     abab "^2.0.5"
     iconv-lite "^0.6.3"
     source-map-js "^1.0.1"
+
+source-map-loader@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.npmjs.org/source-map-loader/-/source-map-loader-4.0.1.tgz"
+  integrity sha512-oqXpzDIByKONVY8g1NUPOTQhe0UTU5bWUl32GSkqK2LjJj0HmwTMVKxcUip0RgAYhY1mqgOxjbQM48a0mmeNfA==
+  dependencies:
+    abab "^2.0.6"
+    iconv-lite "^0.6.3"
+    source-map-js "^1.0.2"
 
 source-map-support@^0.5.6, source-map-support@~0.5.20:
   version "0.5.21"
@@ -11807,7 +11793,7 @@ webpack-sources@^3.2.3:
   resolved "https://registry.npmjs.org/webpack-sources/-/webpack-sources-3.2.3.tgz"
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
-"webpack@^4.0.0 || ^5.0.0", "webpack@^4.37.0 || ^5.0.0", "webpack@^4.4.0 || ^5.9.0", "webpack@^4.44.2 || ^5.47.0", webpack@^5.0.0, webpack@^5.1.0, webpack@^5.20.0, webpack@^5.64.4, "webpack@>= 4", webpack@>=2, "webpack@>=4.43.0 <6.0.0":
+"webpack@^4.0.0 || ^5.0.0", "webpack@^4.37.0 || ^5.0.0", "webpack@^4.4.0 || ^5.9.0", "webpack@^4.44.2 || ^5.47.0", webpack@^5.0.0, webpack@^5.1.0, webpack@^5.20.0, webpack@^5.64.4, webpack@^5.72.1, "webpack@>= 4", webpack@>=2, "webpack@>=4.43.0 <6.0.0":
   version "5.88.1"
   resolved "https://registry.npmjs.org/webpack/-/webpack-5.88.1.tgz"
   integrity sha512-FROX3TxQnC/ox4N+3xQoWZzvGXSuscxR32rbzjpXgEzWudJFEJBpdlkkob2ylrv5yzzufD1zph1OoFsLtm6stQ==

@@ -80,7 +80,6 @@ const Login = () => {
                   click here
                 </Link>
               </p>
-              <br />
               {error && <div>{error}</div>}
               <button className="login-button" type='submit"'>
                 Login

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import './styles.css'
-import { Select } from '@chakra-ui/react'
 import Logo from "../../images/Oau_logo-removebg-preview 2.png"
 import E3 from "../../images/Ellipse 3.png"
 import { search } from 'react-icons-kit/feather/search'
@@ -14,10 +13,8 @@ import menu from "../../images/menu_book 1.png"
 import inbox from "../../images/move_to_inbox 1.png"
 import Overview from "../../images/Overview.png"
 import payment from "../../images/payment 1.png"
-import G20 from "../../images/Group 20.png"
 import sort from "../../images/sort 2.png"
 import sch from "../../images/Search.png"
-import dots from "../../images/ph_dots-three-vertical-thin.png"
 import { Link } from "react-router-dom"
 import { Progress } from '@chakra-ui/react'
 import axios from 'axios';
@@ -25,11 +22,9 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
-  TableCaption,
   TableContainer,
 } from '@chakra-ui/react'
 

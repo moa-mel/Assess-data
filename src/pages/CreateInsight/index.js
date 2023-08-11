@@ -32,15 +32,15 @@ const CreateInsight = () => {
           <br />
           <div className="ci-3but">
             <button className='ci-butt'>Failure rate</button>
-            <button className='ci-butt'>Region</button>
+            <button className={active==="region"?'ci-butts-select':"ci-butts"}
+            onClick={(e)=>setActive("region")}>Region</button>
             <button className='ci-butt'>Region</button>
             <button className='ci-butt'>Disabilities</button>
           </div>
           <br />
           <div className="ci-4but">
             <button className='ci-butt'>Disabilities</button>
-            <button className={active==="region"?'ci-butts-select':"ci-butts"}
-            onClick={(e)=>setActive("region")}>Region</button>
+            <button className='ci-butt'>Region</button>
             <button className='ci-butt'>Region</button>
             <button className='ci-butt'>Disabilities</button>
           </div>
@@ -48,7 +48,7 @@ const CreateInsight = () => {
           <br />
           <br />
           <Link to='/insight'>
-            <button className="ci-button">proceed</button>
+            <button className="ci-button" disabled={!active}>proceed</button>
           </Link>
         </div>
       </div>

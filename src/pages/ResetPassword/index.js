@@ -6,13 +6,12 @@ import { lock } from 'react-icons-kit/feather/lock'
 import { eyeOff } from 'react-icons-kit/feather/eyeOff'
 import { Icon } from "react-icons-kit"
 import axios from 'axios';
-import { useNavigate, useSearchParams, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const ResetPassword = () => {
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const navigate = useNavigate();
-  const [params, setParams] = useSearchParams();
   const { email } = useParams();
   const handleSubmit = (e) => {
     console.log(password)

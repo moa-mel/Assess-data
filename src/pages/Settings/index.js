@@ -4,8 +4,6 @@ import Sidebar from "../../components/Sidebar"
 import Navbar from "../../components/Navbar"
 import phone from "../../images/fluent_phone-add-24-regular.png"
 import mdi from "../../images/mdi_email-sync-outline.png"
-import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
 
 const Settings = () => {
   const [value, setValue] = useState()
@@ -24,16 +22,8 @@ const Settings = () => {
               </div>
             </div>
         {/*<div className="set-input"> */}
-              <PhoneInput
-                placeholder="Enter phone number"
-                value={value}
-                name="phoneNumber"
-                type="text"
-                onChange={setValue}
-                className="set-top-input"
-                country={'NG'}
-                specialLabel={''}
-              />
+              
+              
              {/* </div> */}
           </div>
           <div className='set-down'>

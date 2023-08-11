@@ -11,7 +11,7 @@
     height: 2rem;
     width: 25%;
     margin-right: 135px ;
-    margin-bottom: 1.5rem;
+    /*margin-bottom: 1.5rem; */
     padding: 0.2rem 0.3rem;
     font-size: small;
 	background-color: #F1F6FF;
@@ -30,8 +30,9 @@
 }
 .navbar-search span {
     font-size: 20px;
-	color: #000000;
+	color: #858585;
     right: 1vh;
+    padding-top: -4.5rem;
 }
 .navbar-end{
     display: flex;

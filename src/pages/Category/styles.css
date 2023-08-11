@@ -42,8 +42,6 @@
     width: 25%;
 }
 .cat-imgs:hover{
-   /* border: 1px solid #4F94FC;
-    background-color: #4F94FC; */
     border: 1px solid #4F94FC;
     outline: 0.5px solid #4F94FC;
     -webkit-box-shadow: 2px 2px 9px -2px #4F94FC;

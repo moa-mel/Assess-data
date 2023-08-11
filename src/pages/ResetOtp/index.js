@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./styles.css"
 import axios from 'axios';
 import lock from "../../images/Password security icon.png"
-import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { useNavigate, useParams} from 'react-router-dom';
 
 const ResetOtp = () => {
   const navigate = useNavigate();
@@ -12,8 +12,6 @@ const ResetOtp = () => {
   const [digitFour, setDigitFour] = useState('');
   const [digitFive, setDigitFive] = useState('');
   const [digitSix, setDigitSix] = useState('');
-  // const [email, setEmail] = useState(params.get('email'));
-  const [params, setParams] = useSearchParams();
   const { email } = useParams();
   console.log("loaded", email)
   const handleSubmit = async e => {
