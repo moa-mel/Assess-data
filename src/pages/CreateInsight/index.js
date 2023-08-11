@@ -44,9 +44,6 @@ const CreateInsight = () => {
             <button className='ci-butt'>Region</button>
             <button className='ci-butt'>Disabilities</button>
           </div>
-          <br />
-          <br />
-          <br />
           <Link to='/insight'>
             <button className="ci-button" disabled={!active}>proceed</button>
           </Link>

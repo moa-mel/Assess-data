@@ -24,10 +24,7 @@ const Category = () => {
        <img className='cat-img'  src={G43} alt=''/>
        <img className='cat-img'  src={G44} alt=''/>
        </div>
-       <br/>
-       <br/>
        <Link to='/create-insight'>
-       
        <button className="category-button" disabled={!active}>proceed</button>
        </Link>
        </div>

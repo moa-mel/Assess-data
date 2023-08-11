@@ -14,7 +14,7 @@
     width: 850px;
     border-radius: 16px;
     height: 530px;
-    margin-left: 250px;
+    margin-left: 170px;
 }
 .ci-h2{
     color: #49397C;
@@ -83,6 +83,7 @@
     border: 1px solid #4F94FC;
 }
 .ci-button{
+    margin-top: 30px;
     padding: 7px 18px;
     border: 1px solid #4F94FC;
     background-color: #4F94FC;
@@ -91,5 +92,5 @@
     font-size: 1.1rem;
     font-weight: 400;
     cursor: pointer; 
-    margin-left: 310px;
+    margin-left: 350px;
 }
