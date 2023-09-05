@@ -17,6 +17,7 @@
     color: #00122E;
 }
 .login-but{
+  margin-top: -5px;
     padding: 7px 18px;
     border: 1px solid #00122E;
     background-color: #00122E;
@@ -38,7 +39,7 @@
     left: 50%;
     border-radius: 8px;
     background-color: #35246E;
-    width: 500px;
+    width: 400px;
     height: 87%;
   }
   .login-form-p{
@@ -84,10 +85,11 @@
     font-size: 1.1rem;
     font-weight: 400;
     cursor: pointer; 
-    margin-top: 5px;
-    margin-left: 140px; 
+    margin-top: 8px;
+    margin-left: 152px; 
   }
 .login-p{
+  margin-top: 7px;
     display: flex;
     margin-left: 30px;
 }
@@ -102,8 +104,40 @@
         width: 700%;
         background-color:#E3ECFF;
         height: 100%;
+        margin-left: -10px;
     }
     .login-left{
         display: none;
+    }
+    .login-form{
+      background-color: #fff;
+      width: 340px;
+      height: 350px;
+    }
+    .login-form-p{
+      color: #35246E;
+      margin-left: 115px;
+    }
+    label{
+      color: #000;
+    }
+    .input-p{
+      margin-top: -8px;
+      color: #000;
+      font-size: 0.9rem;
+    }
+    .login-agreed{
+      color: #000;
+    }
+    .login-input-text{
+      width: 88%;
+    }
+    .login-p{
+      margin-top: 17px;
+      margin-left: 25px;
+      font-size: 0.8rem;
+    }
+    .login-button{
+      margin-left: 115px;
     }
 }

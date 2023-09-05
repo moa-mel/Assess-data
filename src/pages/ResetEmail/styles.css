@@ -15,19 +15,19 @@
     color: white;
     height: 530px;
     border-radius: 16px;
-    margin-left: 240px;
+    margin-left: 170px;
 }
 .reset-container{
     margin-left: 200px;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 .re-img{
-    margin-left: 120px ;
+    margin-left: 150px ;
 }
 .re-h2{
     color: #000000;
     font-size: 2.5rem;
-    margin-left: 40px ;
+    margin-left: 50px ;
 }
 .re-p{
     color: #000000;
@@ -38,8 +38,8 @@
 .separe-email{
     display: flex;
     height: 2rem;
-    width: 100%;
-    margin-left: 5px ;
+    width: 60%;
+    margin-left: 25px ;
     margin-bottom: 1.5rem;
     padding: 0.2rem 0.3rem;
     font-size: small;
@@ -55,6 +55,7 @@
     width: 80%;
     margin-right: 38px ;
     margin-bottom: 1.5rem;
+    color: #000000;;
     padding: 0.9rem 1.4rem;
 }
 .separe-email .re-span{
@@ -64,13 +65,48 @@
 }
 .re-button{
     padding: 7px 18px;
-    width: 90%;
+    width: 50%;
     border: 1px solid #49397C;
     background-color: #49397C;
     color: #fff;
     border-radius: 11px;
-    margin-left: 20px ;
+    margin-left: 50px ;
     font-size: 1.1rem;
     font-weight: 400;
     cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .reset-email-contain{
+        padding: none;
+        margin-top: 45px;
+        height: 100%;
+        width: 405px;
+        margin-left: -43px;
+    }
+    .reset-container{
+        margin-top: 30px;
+        margin-left: -90px;
+    }
+    .re-img{
+        width: 15%;
+        margin-left: 234px;
+    }
+    .re-h2{
+        margin-left: 200px;
+        font-size: 1.1rem;
+    }
+    .re-p{
+        font-size: 0.9rem;
+        margin-left: 100px;
+    }
+    .re-form{
+        margin-left: 150px;
+    }
+    .separe-email{
+      width: 96%;
+      margin-left: -30px;
+    }
+    .re-button{
+        width: 60%;
+    }
 }

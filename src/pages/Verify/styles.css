@@ -32,12 +32,7 @@
     margin-top: 15px;
 }
 
-.wrapper .container .lesser .ver-parag{
-  /*  color: #4B4A4A; */
-}
-
 .wrapper .container .right{
-  /*  background-color:#01C8FF; */
     padding: 1rem;
     width: 40%;
     height: 95vh;
@@ -80,7 +75,7 @@
     -webkit-box-shadow: 2px 2px 9px -2px #01C8FF;
      box-shadow: 2px 2px 9px -2px #01C8FF;
 }
-.wrap-less button{
+ .very-butt{
     width: 100%;
     background: #01C8FF;
     color: #4B4A4A;
@@ -97,12 +92,14 @@
 }
 
 @media screen and (max-width: 768px) {
-    .wrapper .container .right{
-        display: none;
+    .ver-p{
+        font-size: 1.7rem;
+        color: #35246E;
     }
-    .wrapper .container .lesser{
-        width: 100%;
-        background-color:#E3ECFF;
-        height: 100%;
+    .ver-parag{
+        margin-top: 10px;
+    }
+    .very-butt{
+        margin-top: -35px;
     }
 }

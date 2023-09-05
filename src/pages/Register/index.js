@@ -28,8 +28,9 @@ const Register = () => {
     e.preventDefault();
     try {
       const url =
-        'https://final-year-project-ya34.onrender.com/api/auth/register';
+        'https://final-year-j646.onrender.com/api/auth/register';
       const { data: res } = await axios.post(url, data);
+      localStorage.setItem("firstName", res. firstName);
       if (res.success) {
         setMsg(res.message);
         setSuccess(true);
@@ -72,7 +73,7 @@ const Register = () => {
             </div>
           </div>
           <div className="register-right">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='regg-form'>
               <p className="form-p">Create Account</p>
               <br />
               <div className="reg-fl">
@@ -132,7 +133,7 @@ const Register = () => {
                 Sign up
               </button>
               <br />
-              <div className="reg-p">
+              <div className="reg-pp">
                 <p className="reg-agreed">I have read and agreed to the</p>
                 <p className="reg-terms">Terms of Service</p>
               </div>

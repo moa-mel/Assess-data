@@ -12,7 +12,7 @@
 }
 .set-top{
     margin-top: 20px;
-    align-item: centre;
+    align-items: centre;
     padding: 20px;
     width: 45%;
     height: 30%;
@@ -51,7 +51,7 @@
 }
 .set-down{
     margin-top: 10px;
-    align-item: centre;
+    align-items: centre;
     padding: 20px;
     width: 40%;
     border-radius: 16px;
@@ -104,4 +104,7 @@
     cursor: pointer;
     width: 30%;
     margin-left: 95px;
+}
+@media screen and (max-width: 768px) {
+    
 }

@@ -6,8 +6,8 @@ import { LineChart, Line, XAxis,YAxis, CartesianGrid, Tooltip, ResponsiveContain
 
     return(
         <div className="chart">
-          <h3 className="chartTitle"> {title} </h3>
-          <ResponsiveContainer width="100%" aspect={4 / 3}>
+          <h3 className="chartTitle"> {title}  </h3>
+          <ResponsiveContainer width='100%' aspect={4/3}>
              <LineChart 
           data={data}
            >

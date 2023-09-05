@@ -44,7 +44,6 @@
     border-radius: 5px;
     margin: 9px;
     border:1.5px solid #858585;
-    //background-color:#000000; 
     font-weight: bold;
     color: #000000;
     outline: none;
@@ -60,4 +59,41 @@
     font-weight: 400;
     cursor: pointer;
     width: 90%;
+}
+@media screen and (max-width: 768px) {
+    .reset-otp-contain{
+        padding: none;
+        margin-top: 45px;
+        height: 100%;
+        width: 405px;
+        margin-left: -43px;
+    }
+    .ro-container{
+        margin-top: 30px;
+        margin-left: -90px;
+    }
+    .ro-img{
+        width: 15%;
+        margin-left: 234px;
+    }
+    .ro-h2{
+        margin-left: 200px;
+        font-size: 1.1rem;
+    }
+    .ro-p{
+        font-size: 0.9rem;
+        margin-left: 100px;
+    }
+    .ro-form{
+        margin-left: 150px;
+        color: #000;
+    }
+    .ro-input{
+        width: 50%;
+        margin-left: -30px;
+        color: #000;
+    }
+    .ro-button{
+        width: 60%;
+    }
 }

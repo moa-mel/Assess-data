@@ -5,7 +5,7 @@
     display: flex;
 }
 .side{
-    align-item: centre;
+    align-items: centre;
     margin-left: 3px;
     padding: 20px;
     height: 100%;
@@ -66,5 +66,33 @@
     width: 20%;
     height: 20%;
 }
-
+@media screen and (max-width: 768px) {
+    .side-right-p{
+       display: none;
+    }
+    .side-right-p1{
+      display: none;
+    }
+    .side-right-p2{
+      display: none;
+    }
+    .side-right-p3{
+      display: none;
+    }
+    .side-right-p4{
+      display: none;
+    }
+    .side-right-p5{
+      display: none;
+    }
+    .side-right-p6{
+      display: none;
+    }
+    .side-right-p7{
+      display: none;
+    }
+    .side-right-p8{
+      display: none;
+    }
+}
 

@@ -33,3 +33,28 @@
     color: #000000;
     margin-left: 25px ;
 }
+@media screen and (max-width: 768px) {
+    .reset-confirm-contain{
+        padding: none;
+        margin-top: 45px;
+        height: 100%;
+        width: 405px;
+        margin-left: -43px;
+    }
+    .rc-contain{
+        margin-top: 30px;
+        margin-left: -90px;
+    }
+    .rc-img{
+        width: 15%;
+        margin-left: 234px;
+    }
+    .rc-h4{
+        margin-left: 200px;
+        font-size: 1.1rem;
+    }
+    .rc-p{
+        font-size: 0.9rem;
+        margin-left: 100px;
+    }
+}

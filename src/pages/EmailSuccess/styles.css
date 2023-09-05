@@ -34,3 +34,28 @@
     margin-left: 113px;
     font-size: 14px;
 }
+@media screen and (max-width: 768px) {
+    .success-container{
+        padding: none;
+        margin-top: 45px;
+        height: 100%;
+        width: 405px;
+        margin-left: -43px;
+    }
+    .success-contain{
+        margin-top: 30px;
+        margin-left: -90px;
+    }
+    .success-img{
+        width: 15%;
+        margin-left: 234px;
+    }
+    .success-h2{
+        margin-left: 200px;
+        font-size: 1.1rem;
+    }
+    .success-h4{
+        font-size: 0.9rem;
+        margin-left: 100px;
+    }
+}

@@ -105,3 +105,59 @@
     font-weight: 500;
     cursor: pointer;
 }
+@media screen and (max-width: 1200px) {
+    .in-con{
+      flex-direction:column;
+    }
+    .in-main{
+        flex-direction:column; 
+    }
+    .in-side{
+       flex-flow:row;
+    }
+  }
+@media screen and (max-width: 768px) {
+    .insight-nav-h{
+        display: none;
+    }
+    .drop-1{
+       width: 100px;
+    }
+    .drop-2{
+        width: 100px;
+     }
+     .drop-3{
+        width: 100px;
+     }
+    .in-main{
+        width: 55%;
+    } 
+    .in-side{
+        width: 280px;
+       /* width: 100%; */
+        margin-left: 60px;
+    }
+    .in-con{
+        margin-top: 10px;
+        }
+       .in-con-chart{
+        margin-top: 10px;
+       }
+       .sigh-uhh{
+        margin-top: 10px;
+        margin-left: 55px;
+       }
+       .way{
+        display: flex;
+        column-gap: 5px;
+        margin-left: -78px;
+       }
+       .work{
+        display: flex;
+        column-gap: 5px;
+        margin-left: -78px;
+       }
+       .gulu{
+        display: none;
+       }
+}

@@ -1,11 +1,14 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './style.css';
 import { Link } from 'react-router-dom';
 import Logo from "../../images/Oau_logo-removebg-preview 2.png"
 import mainimg from "../../images/Group 31.png"
 import mainvec from "../../images/Vector 6.png"
+import {FaBars, FaTimes} from 'react-icons/fa';
 
 const Home = () => {
+  const [click, setClick] = useState(false);
+   const handleClick = () => setClick(!click)
 
   return (
     <div className='home'>
@@ -15,8 +18,8 @@ const Home = () => {
           <div className='nav-logo'>
             <img className='logos' src={Logo} alt="" />
           </div>
-          <div className='nav-items'>
-            <ul>
+         
+            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
               <Link className='nav-link' to="/register" >
                 <li className='nav-li' >
                   Create Account
@@ -30,13 +33,19 @@ const Home = () => {
               <li className='nav-li' >
                 Services
               </li>
-            </ul>
-          </div>
-          <div className='nav-button'>
+              <li className='nav-li'>
+                <div>
             <button className='nav-but' >
               Visit our website
             </button>
-          </div>
+            </div>
+            </li>
+            </ul>
+            <div className="hamburger" onClick={handleClick}>
+           {click ? (<FaTimes size={20} style={{color: '#333'}} />) : 
+           (<FaBars size={20} style={{color: '#333'}} />)}
+           </div>
+         
         </div>
         {/*Main*/}
         <div className='hero-wrapper'>
@@ -59,7 +68,6 @@ const Home = () => {
             <img className='rightimg' src={mainimg} alt='' />
           </div>
         </div>
-
       </div>
     </div>
   )

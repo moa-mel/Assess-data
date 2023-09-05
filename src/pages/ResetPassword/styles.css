@@ -48,6 +48,7 @@
     background-color: transparent;
     border: hidden;
     height: 2rem;
+    color: #000000;;
     width: 80%;
     margin-right: 36px ;
     margin-bottom: 1.5rem;
@@ -95,4 +96,40 @@
     cursor: pointer;
     margin-left: 18px ;
     width: 90%;
+}
+@media screen and (max-width: 768px) {
+    .reset-password-contain{
+        padding: none;
+        margin-top: 45px;
+        height: 100%;
+        width: 405px;
+        margin-left: -43px;
+    }
+    .rp-contain{
+        margin-top: 30px;
+        margin-left: -90px;
+    }
+    .rp-img{
+        width: 15%;
+        margin-left: 234px;
+    }
+    .rp-h2{
+        margin-left: 200px;
+        font-size: 1.1rem;
+    }
+    .rp-form{
+        font-size: 0.9rem;
+        margin-left: 100px;
+    }
+    .new-password{
+        width: 96%;
+        margin-left: -30px;
+    }
+    .confirm-password{
+        width: 96%;
+        margin-left: -30px;
+    }
+    .rp-button{
+        width: 60%;
+    }
 }

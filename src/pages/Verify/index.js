@@ -104,7 +104,7 @@ const Verify = () => {
                 <br />
                 <br />
                 <div>
-                  <button>Proceed</button>
+                  <button className='very-butt'>Proceed</button>
                 </div>
               </form>
             </div>

@@ -251,3 +251,58 @@
     color: #49397C;
     background-color: #F3F4F6;
 }
+@media screen and (max-width: 1200px) {
+    .pay-content-top{
+        flex-direction: column; 
+    }
+}
+@media screen and (max-width: 768px) {
+    .payment-search{
+        display: none;
+    }
+    .pay-side-right{
+        display: none; 
+    }
+    .pay-side-left-img{
+        width: 60%;
+    }
+    .pay-content-top{
+        width: 90%;
+    }
+    .pay-top-left{
+        margin-left: -15px;
+     width: 320px;
+    }
+    .pay-top-right{
+        margin-left: -15px;
+        margin-top: 10px;
+        width: 320px;
+    }
+    .pay-down-up{
+        margin-top: 10px;
+       margin-left: 30px;
+        column-gap: 16px;
+    }
+    .pay-content-down{
+        margin-left: -30px; 
+    }
+    .pay-down-img{
+        display: none; 
+    }
+    .pay-down-ig{
+        display: none; 
+    }
+    .pay-down-p1{
+        font-size: 0.9rem;
+    }
+    TableContainer{
+        font-size: 0.7rem; 
+        margin-left: -10px;
+    }
+    .py-h-but{
+        display: none; 
+    }
+    .py-toppp-p1{
+        display: none; 
+    }
+}

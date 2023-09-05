@@ -94,3 +94,46 @@
     cursor: pointer; 
     margin-left: 350px;
 }
+
+
+
+@media screen and (max-width: 768px) {
+      .ci-container{
+        padding: none;
+        height: 100%;
+        width: 340px;
+        margin-left: -46px;
+      }
+      .ci-h2{
+        margin-left: 70px;
+      }
+      .ci-sort{
+        margin-left: 40px;
+        column-gap: 96px;
+      }
+      .ci-1but{
+        margin-left: -15px;
+      }
+      .ci-2but{
+        margin-left: -10px;
+      }
+      .ci-3but{
+        margin-left: -10px;
+      }
+      .ci-4but{
+        margin-left: -10px;
+      }
+      .ci-butt{
+        padding: 5px;
+        font-size: 0.87rem;
+      }
+      .ci-button{
+        margin-left: 108px;
+      }
+     .ci-butts{
+      font-size: 0.8rem;
+     }
+     .ci-butts-select{
+      font-size: 0.8rem;
+     }
+}

@@ -14,7 +14,7 @@
     display: flex;
 }
 .feed-side{
-    align-item: centre;
+    align-items: centre;
     margin-left: 3px;
     padding: 20px;
     height: 100%;
@@ -107,7 +107,7 @@
 }
 .feed-low-left{
     margin-top: 30px;
-    align-item: centre;
+    align-items: centre;
     padding: 20px;
     width: 90%;
     color: #49397C;
@@ -115,7 +115,7 @@
 }
 .feed-low-right{
     margin-top: 66px;
-    align-item: centre;
+    align-items: centre;
     padding: 20px;
     width: 100%;
     color: #49397C;
@@ -126,7 +126,7 @@
 }
 .feed-right{
     margin-top: 6px;
-    align-item: centre;
+    align-items: centre;
     padding: 20px;
     width: 90%;
     height: 100%;
@@ -175,7 +175,7 @@
     display: flex;
     column-gap: 110px;
 }
-
-
-
+@media screen and (max-width: 768px) {
+    
+}
 

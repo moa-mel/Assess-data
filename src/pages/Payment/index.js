@@ -29,7 +29,8 @@ import {
 } from '@chakra-ui/react'
 
 
-const Payment = ({paymentSuccessful}) => {
+const Payment = ({ paymentSuccessful }) => {
+  const [user, setUser] = useState(false)
   const [activeTab, setActiveTab] = useState(0);
   const [paymentInitialized, setPaymentInitialized] = useState(false);
   const [url, setUrl] = useState('')
@@ -69,11 +70,11 @@ const Payment = ({paymentSuccessful}) => {
     }
   };
 
-    // Fetch transaction history from the backend/API
-    const fetchTransactionHistory = async () => {
-      const token = localStorage.getItem("accessToken")
-      try {
-        const response = await axios.post('https://final-year-project-ya34.onrender.com/api/transaction/transaction-history',
+  // Fetch transaction history from the backend/API
+  const fetchTransactionHistory = async () => {
+    const token = localStorage.getItem("accessToken")
+    try {
+      const response = await axios.post('https://final-year-project-ya34.onrender.com/api/transaction/transaction-history',
         {
 
         },
@@ -84,26 +85,26 @@ const Payment = ({paymentSuccessful}) => {
             // Add any required headers here, such as authentication tokens
           },
         }
-        );
-        const transactionsData = response.data.transactionHistory;
-        console.log('work', transactionsData)
-         // Assuming the response data is an array of transactions
-        setTransactions(transactionsData);
-      } catch (error) {
-        console.error('Error fetching transaction history:', error);
-      }
-    } 
+      );
+      const transactionsData = response.data.transactionHistory;
+      console.log('work', transactionsData)
+      // Assuming the response data is an array of transactions
+      setTransactions(transactionsData);
+    } catch (error) {
+      console.error('Error fetching transaction history:', error);
+    }
+  }
 
- useEffect(() =>{
-  fetchTransactionHistory()
-} ,[]) 
+  useEffect(() => {
+    fetchTransactionHistory()
+  }, [])
 
-  return(
+  return (
     <div className='payment'>
       {/*header*/}
       <div className='payment-header'>
-      <Link to='/'>
-        <img className='payment-logo' src={Logo} alt="" />
+        <Link to='/'>
+          <img className='payment-logo' src={Logo} alt="" />
         </Link>
         <div className="payment-search">
           <input type="text"
@@ -113,9 +114,10 @@ const Payment = ({paymentSuccessful}) => {
           <span className='py-span' ><Icon icon={search} size={15} /></span>
         </div>
         <div className="payment-end">
-        {/*  <Select variant='unstyled' placeholder="Profile">
+          {/*  <Select variant='unstyled' placeholder="Profile">
             <option value='option1'>Profile</option>
   </Select> */}
+          <p>Hi {user.firstName}</p>
           <img className='payment-e3' src={E3} alt="" />
         </div>
       </div>
@@ -180,9 +182,6 @@ const Payment = ({paymentSuccessful}) => {
                 </div>
                 <p className="py-toppp-p1">#100,000</p>
               </div>
-              <div>
-
-              </div>
             </div>
             <div className="pay-top-right">
               <p className="pay-right-p1">Next Payment </p> <br />
@@ -212,31 +211,28 @@ const Payment = ({paymentSuccessful}) => {
               </div>
             </div>
             <br />
-
             {activeTab === 0 &&
-              <TableContainer  >
-              <Table size='sm'>
-                <Thead>
-                  <Tr>
-                    <Th>TransactionReference</Th>
-                    <Th>Amount</Th>
-                    <Th>Date/Time</Th>
-                  </Tr>
-                </Thead>
-                <Tbody>
-                {transactions?.map(( transaction, i) =>(  
-      <Tr key={i}>
-        <Td>{transaction.transactionReference}</Td>
-        <Td>{transaction.amount}</Td>
-        <Td>{transaction.createdAt}</Td>
-      </Tr>
-               ))}
-              
-    </Tbody>
-    </Table>
-  </TableContainer>
+              <TableContainer>
+                <Table size='sm'>
+                  <Thead>
+                    <Tr>
+                      <Th>TransactionRef</Th>
+                      <Th>Amount</Th>
+                      <Th>Date/Time</Th>
+                    </Tr>
+                  </Thead>
+                  <Tbody>
+                    {transactions?.map((transaction, i) => (
+                      <Tr key={i}>
+                        <Td>{transaction.transactionReference}</Td>
+                        <Td>{transaction.amount}</Td>
+                        <Td>{transaction.createdAt}</Td>
+                      </Tr>
+                    ))}
+                  </Tbody>
+                </Table>
+              </TableContainer>
             }
-
             <div className='' id="Failed">
               {activeTab === 1 &&
                 <p>Failed, sorry!</p>}

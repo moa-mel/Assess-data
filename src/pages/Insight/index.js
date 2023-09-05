@@ -54,7 +54,7 @@ const Insight = ({ data }) => {
               borderColor='#35246E'
               value={chartType}
               onChange={handleChangeChartType}
-              color='#fff' placeholder='Select format'>
+              color='#fff' placeholder='Select chart'>
               <option value='line'>linechart</option>
               <option value='bar'>barchart</option>
               <option value='pie'>piechart</option>
@@ -104,6 +104,7 @@ const Insight = ({ data }) => {
       <div className='in-main' id="main-content">
         {/*sidebar*/}
         <div className='in-side'>
+          <div className='way'>
           <Card align='center' size='sm' width='70%' marginLeft='30px'>
             <CardBody>
               <Stack mt='1' spacing='1'>
@@ -129,7 +130,9 @@ const Insight = ({ data }) => {
               </Stack>
             </CardBody>
           </Card>
+          </div>
 
+          <div className='work'>
           <Card align='center' size='sm' width='70%' marginLeft='30px' marginTop='5px'>
             <CardBody>
               <Stack mt='3' spacing='3'>
@@ -155,7 +158,8 @@ const Insight = ({ data }) => {
               </Stack>
             </CardBody>
           </Card>
-
+          </div>
+          <div className='gulu'>
           <Card align='center' size='sm' width='70%' marginLeft='30px' marginTop='5px'>
             <CardBody>
               <Stack mt='3' spacing='3'>
@@ -168,13 +172,14 @@ const Insight = ({ data }) => {
               </Stack>
             </CardBody>
           </Card>
+          </div>
         </div>
         {/*content*/}
         <div className='in-content'>
           <div className='in-con'>
-            <div className='n-con-line'>
+            <div className='in-con-line'>
               {chartType === 'line' ? (
-                <Card  size='lg' width='400px' height='300px' >
+                <Card  size='lg' width='350px' height='300px' >
                   <CardBody>
                     <Box>
                       <Chart data={regionAvgPerfData} title="Average performance by Region" dataKey="fig" />
@@ -182,7 +187,7 @@ const Insight = ({ data }) => {
                   </CardBody>
                 </Card>
               ) : chartType === 'bar' ? (
-                  <Card  size='lg' width='400px' height='300px'  >
+                  <Card  size='lg' width='350px' height='300px'  >
                     <CardBody>
                       <Box>
                         <ResponsiveContainer width="100%" aspect={4 / 3}>
@@ -200,7 +205,7 @@ const Insight = ({ data }) => {
                     </CardBody>
                   </Card>
                 ) : (
-                  <Card size='lg' width='400px' height='300px' >
+                  <Card size='lg' width='350px' height='300px' >
                     <CardBody>
                       <Box>
                         <ResponsiveContainer width="100%" aspect={4 / 3}>
@@ -259,7 +264,7 @@ const Insight = ({ data }) => {
               </div> */}
             <div className='in-con-chart'>
               {chartType === 'line' ? (
-                <Card size='lg' width='400px' height='300px' >
+                <Card size='lg' width='350px' height='300px' >
                   <CardBody>
                     <Box>
                       <Chart data={regionGenPerfData} title="General Performance by Region" dataKey="lip" />
@@ -267,7 +272,7 @@ const Insight = ({ data }) => {
                   </CardBody>
                 </Card>
               ) : chartType === 'bar' ? (
-                <Card size='lg' width='400px' height='300px' >
+                <Card size='lg' width='350px' height='300px' >
                   <CardBody>
                     <Box>
                       <ResponsiveContainer width="100%" aspect={4 / 3}>
@@ -286,7 +291,7 @@ const Insight = ({ data }) => {
                   </CardBody>
                 </Card>
               ) : (
-                <Card size='lg' width='400px' height='300px' >
+                <Card size='lg' width='350px' height='300px' >
                   <CardBody>
                     <Box>
                       <ResponsiveContainer width="100%" aspect={4 / 3}>
