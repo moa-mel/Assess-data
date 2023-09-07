@@ -22,9 +22,7 @@ const Login = () => {
       const url = 'https://final-year-project-ya34.onrender.com/api/auth/login';
       const { data: res } = await axios.post(url, data);
       console.log(res)
-     /* localStorage.setItem("token", res.data); */
       localStorage.setItem("accessToken", res.accessToken);
-      /*window.location = "/category";*/
       navigate("/category")
     } catch (error) {
       if (

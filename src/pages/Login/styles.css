@@ -104,10 +104,13 @@
         width: 700%;
         background-color:#E3ECFF;
         height: 100%;
-        margin-left: -10px;
+        margin-left: -8.5px;
     }
     .login-left{
         display: none;
+    }
+    .log-p{
+      font-size: 0.8rem;
     }
     .login-form{
       background-color: #fff;
@@ -138,6 +141,6 @@
       font-size: 0.8rem;
     }
     .login-button{
-      margin-left: 115px;
+      margin-left: 125px;
     }
 }

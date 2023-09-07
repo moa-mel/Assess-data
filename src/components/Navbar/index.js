@@ -23,7 +23,7 @@ const Navbar = () => {
     </div>
     <div className="navbar-end">
       <Select variant='unstyled' placeholder={user.firstName}>
-        <option value='option1'>Profile</option>
+        <option value='option1'>{user.firstName}</option>
         <option value='option1'>Log Out</option>
       </Select>
       <img className='navbar-e3' src={E3} alt="" />

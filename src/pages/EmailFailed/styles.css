@@ -37,10 +37,10 @@
 @media screen and (max-width: 768px) {
     .fail-container{
         padding: none;
-        margin-top: 45px;
+        margin-top: 125px;
         height: 100%;
-        width: 405px;
-        margin-left: -43px;
+        width: 340px;
+        margin-left: -46px;
     }
     .fail-contain{
         margin-top: 30px;
@@ -48,14 +48,15 @@
     }
     .fail-img{
         width: 15%;
-        margin-left: 234px;
+        margin-left: 214px;
     }
     .fail-h2{
-        margin-left: 200px;
-        font-size: 1.1rem;
+        margin-top: -35px;
+        margin-left: 90px;
+        font-size: 0.9rem;
     }
     .fail-h4{
         font-size: 0.9rem;
-        margin-left: 100px;
+        margin-left: 180px;
     }
 }
