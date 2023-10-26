@@ -24,7 +24,7 @@ const Verify = () => {
       digitOne + digitTwo + digitThree + digitFour + digitFive + digitSix;
     await axios
       .post(
-        `https://final-year-project-ya34.onrender.com/api/auth/verify-email`,
+        `https://final-year-j646.onrender.com/api/auth/verify-email`,
          { token,  email}
       )
       .then(res => {

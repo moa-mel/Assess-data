@@ -19,8 +19,11 @@ const Login = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const url = 'https://final-year-project-ya34.onrender.com/api/auth/login';
-      const { data: res } = await axios.post(url, data);
+      const url = 'https://final-year-j646.onrender.com/api/auth/login'
+     
+      const { data: res } = await axios.post(url, data, {
+        mode: 'cors',
+      });
       console.log(res)
       localStorage.setItem("accessToken", res.accessToken);
       navigate("/category")

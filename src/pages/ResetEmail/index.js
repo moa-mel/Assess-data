@@ -12,7 +12,7 @@ const ResetEmail = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post(`https://final-year-project-ya34.onrender.com/api/auth/reset-password`,
+    axios.post(`https://final-year-j646.onrender.com/api/auth/reset-password`,
         {
             email: email,
         })

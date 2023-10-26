@@ -16,7 +16,7 @@ const ResetPassword = () => {
   const handleSubmit = (e) => {
     console.log(password)
     e.preventDefault();
-    axios.post(`https://final-year-project-ya34.onrender.com/api/auth/update-password`,
+    axios.post(`https://final-year-j646.onrender.com/api/auth/update-password`,
       {
         email: email,
         password: password,

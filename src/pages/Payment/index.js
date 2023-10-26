@@ -46,7 +46,7 @@ const Payment = ({ paymentSuccessful }) => {
     console.log("okay")
     e.preventDefault()
     try {
-      const response = await axios.post('https://final-year-project-ya34.onrender.com/api/transaction/make-payment',
+      const response = await axios.post('https://final-year-j646.onrender.com/api/transaction/make-payment',
         {
 
         },
@@ -74,7 +74,7 @@ const Payment = ({ paymentSuccessful }) => {
   const fetchTransactionHistory = async () => {
     const token = localStorage.getItem("accessToken")
     try {
-      const response = await axios.post('https://final-year-project-ya34.onrender.com/api/transaction/transaction-history',
+      const response = await axios.post('https://final-year-j646.onrender.com/api/transaction/transaction-history',
         {
 
         },
@@ -213,20 +213,20 @@ const Payment = ({ paymentSuccessful }) => {
             <br />
             {activeTab === 0 &&
               <TableContainer>
-                <Table size='sm'>
+                <Table  fontSize={{ base: '6px', sm: 'inherit' }}>
                   <Thead>
-                    <Tr>
+                    <Tr >
                       <Th>TransactionRef</Th>
-                      <Th>Amount</Th>
-                      <Th>Date/Time</Th>
+                      <Th style={{ padding: '0px', margin: '2px' }}>Amount</Th>
+                      <Th style={{ padding: '0px', margin: '2px' }}>Date/Time</Th>
                     </Tr>
                   </Thead>
                   <Tbody>
                     {transactions?.map((transaction, i) => (
                       <Tr key={i}>
-                        <Td>{transaction.transactionReference}</Td>
-                        <Td>{transaction.amount}</Td>
-                        <Td>{transaction.createdAt}</Td>
+                        <Td >{transaction.transactionReference}</Td>
+                        <Td style={{ padding: '8px', margin: '2px' }}>{transaction.amount}</Td>
+                        <Td style={{ padding: '-4px', margin: '2px' }}>{transaction.createdAt}</Td>
                       </Tr>
                     ))}
                   </Tbody>

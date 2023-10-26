@@ -21,7 +21,7 @@ const ResetOtp = () => {
       digitOne + digitTwo + digitThree + digitFour + digitFive + digitSix;
     await axios
       .post(
-        `https://final-year-project-ya34.onrender.com/api/auth/confirm-token`,
+        `https://final-year-j646.onrender.com/api/auth/confirm-token`,
         { token, email }
       )
       .then(res => {
